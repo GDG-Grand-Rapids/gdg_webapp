@@ -1,23 +1,15 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name gdgWebappApp
- * @description
- * # gdgWebappApp
- *
- * Main module of the application.
- */
-angular
-  .module('gdgWebappApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+angular.module('gdgWebappApp', [
+  'ngMaterial',
+  'ngRoute'
+])
+.controller('AppCtrl', function ($scope,$location) {
+  $scope.go = function(url) {
+    $location.path(url);
+  };
+})
+.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -32,4 +24,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+});
