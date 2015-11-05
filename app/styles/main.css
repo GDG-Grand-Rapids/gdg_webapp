@@ -1,20 +1,30 @@
+.fabSpeedDial md-fab-speed-dial md-fab-trigger {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.fabSpeedDial md-fab-speed-dial.md-scale.ng-hide, .fabSpeedDial md-fab-speed-dial.md-fling.ng-hide {
+  display: flex !important;
+}
+.fabSpeedDial md-fab-speed-dial.md-scale.ng-hide md-fab-trigger, .fabSpeedDial md-fab-speed-dial.md-fling.ng-hide md-fab-trigger {
+  transform: scale(0);
+}
 .md-toolbar-tools {
   margin-right: 50px;
 }
-
 .divider {
-  left:50%;
-  top:10%;
-  bottom:10%;
-  height: 100px;
-  border-left:1px solid white;
+  left: 50%;
+  top: 10%;
+  bottom: 10%;
+  height: 50px;
+  border-left: 1px solid white;
 }
-
 img {
-  height:40%;
-  width:auto;
+  height: 40%;
+  width: auto;
   margin-right: 10px;
 }
+
+/*===============================  Defaults ==================================*/
 
 .browsehappy {
   margin: 0.2em 0;
@@ -22,24 +32,26 @@ img {
   color: #000;
   padding: 0.2em 0;
 }
-
 body {
   padding: 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.footer {
+
+.header, .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* Custom page header */
+
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
+
 /* Make the masthead heading the same height as the navigation */
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -48,25 +60,24 @@ body {
 }
 
 /* Custom page footer */
+
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Responsive: Portrait tablets and up */
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
-
   /* Remove the padding we set earlier */
-  .header,
-  .footer {
+  .header, .footer {
     padding-left: 0;
     padding-right: 0;
   }

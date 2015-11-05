@@ -1,88 +1,96 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="gdgWebappApp">
-    <!--[if lte IE 8]>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="gdgWebappApp">
+  <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header" ng-controller="AppCtrl">
-      <md-content>
-        <md-toolbar>
-          <div class="md-toolbar-tools">
-            <img src="images/GDG_square_lg.png" alt="GDG Logo">
-            <h2>
-              <span>GDG Grand Rapids</span>
-            </h2>
-            <div class="divider"><br/></div>
-            <md-button ng-click="go('/')">Home</md-button>
-            <md-button ng-click="go('/about')">About</md-button>
-            <span flex></span>
-            <div class="nav-buttons">
-                <md-button class="md-raised md-accent">My profile</md-button>
-                <md-button class="md-raised md-warn">Log Out</md-button>
-            </div>
-            <md-button class="md-icon-button" aria-label="More">
-              <md-icon md-svg-icon="../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/more_vert.svg"></md-icon>
-            </md-button>
-          </div>
-        </md-toolbar>
-      </md-content>
-    </div>
+  <!-- Add your site or application content here -->
+  <div ng-controller="AppCtrl as app" class="header">
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools fabSpeedDial">
+          <img src="images/banner/GDG_square_lg.png" alt="GDG Logo">
+          <h2>
+            <span>GDG Grand Rapids</span>
+          </h2>
+          <div class="divider"></div>
+          <md-button ng-click="go('/')">Home</md-button>
+          <md-button ng-click="go('/about')">About</md-button>
+          <md-button ng-click="go('/sponsors')">Sponsors</md-button>
+          <span flex></span>
+          <md-fab-speed-dial ng-hide="app.hidden" md-direction="left" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
+            <md-fab-trigger>
+              <md-button aria-label="menu" class="md-fab md-warn">
+                <md-icon md-svg-src="images/icons/menu.svg" aria-label="menu"></md-icon>
+              </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+              <div ng-repeat="item in app.items">
+                <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-click="redirect(item.url)">
+                  <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+                </md-button>
+              </div>
+            </md-fab-actions>
+          </md-fab-speed-dial>
+        </div>
+      </md-toolbar>
+    </md-content>
+  </div>
 
+  <div class="container">
+    <div ng-view=""></div>
+  </div>
+
+  <div class="footer">
     <div class="container">
-      <div ng-view=""></div>
+      <p>GDG Grand Rapids</p>
     </div>
+  </div>
 
-    <div class="footer">
-      <div class="container">
-        <p>GDG Grand Rapids</p>
-      </div>
-    </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    ! function(A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+          (A[l].q = A[l].q || []).push(arguments)
+        }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/sponsors.js"></script>
+  <!-- endbuild -->
+</body>
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
-    <!-- endbuild -->
-  </body>
 </html>
