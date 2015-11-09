@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="gdgWebappApp">
 
 <head>
   <meta charset="utf-8">
@@ -12,52 +12,49 @@
   <!-- endbuild -->
 </head>
 
-<body ng-app="gdgWebappApp">
+<body ng-controller="AppCtrl as app">
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div ng-controller="AppCtrl as app" class="header">
-    <md-content>
-      <md-toolbar>
-        <div class="md-toolbar-tools fabSpeedDial">
-          <img src="images/banner/GDG_square_lg.png" alt="GDG Logo">
-          <h2>
-            <span>GDG Grand Rapids</span>
-          </h2>
-          <div class="divider"></div>
-          <md-button ng-click="go('/')">Home</md-button>
-          <md-button ng-click="go('/about')">About</md-button>
-          <md-button ng-click="go('/sponsors')">Sponsors</md-button>
-          <span flex></span>
-          <md-fab-speed-dial ng-hide="app.hidden" md-direction="left" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
-            <md-fab-trigger>
-              <md-button aria-label="menu" class="md-fab md-warn">
-                <md-icon md-svg-src="images/icons/menu.svg" aria-label="menu"></md-icon>
-              </md-button>
-            </md-fab-trigger>
-            <md-fab-actions>
-              <div ng-repeat="item in app.items">
-                <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-click="redirect(item.url)">
-                  <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
-                </md-button>
-              </div>
-            </md-fab-actions>
-          </md-fab-speed-dial>
-        </div>
-      </md-toolbar>
-    </md-content>
-  </div>
-
-  <div class="container">
-    <div ng-view=""></div>
-  </div>
-
-  <div class="footer">
-    <div class="container">
-      <p>GDG Grand Rapids</p>
+  <div class="header" ng-class="header" layout="row" ng-cloak>
+    <div class="md-toolbar-tools" layout="row">
+      <img src="images/banner/GDG_square_lg.png" alt="GDG Logo">
+      <h2>
+        <span>GDG Grand Rapids</span>
+      </h2>
+      <span flex></span>
+      <md-button md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
+      <md-button md-no-ink ng-click="go('/about'); gotoLocation()">About</md-button>
+      <md-button md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
+      <md-button md-no-ink ng-click="go('/'); gotoLocation()">Contacts</md-button>
     </div>
+    <div class="fabSpeedDial" ng-show="isHeaderMinimized" layout="row">
+      <md-fab-speed-dial ng-hide="app.hidden" md-direction="down" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
+        <md-fab-trigger>
+          <md-button aria-label="menu" id="menu-button" class="md-fab md-warn">
+            <md-icon md-svg-src="images/icons/menu.svg" aria-label="menu"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+        <md-fab-actions>
+          <div ng-repeat="item in app.items">
+            <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-href="{{item.url}}" target="_blank">
+              <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+            </md-button>
+          </div>
+        </md-fab-actions>
+      </md-fab-speed-dial>
+    </div>
+  </div>
+  <div class="filler">
+  </div>
+  <div ng-view="">
+  </div>
+  <div class="footer">
+  </div>
+  <div class="meetup">
+    <md-button class="md-raised md-warn" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">Meetup</md-button>
   </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

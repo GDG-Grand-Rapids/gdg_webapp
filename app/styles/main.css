@@ -1,88 +1,66 @@
-.fabSpeedDial md-fab-speed-dial md-fab-trigger {
-  transition: all 0.3s ease-in-out;
-  transform: scale(1);
-}
-.fabSpeedDial md-fab-speed-dial.md-scale.ng-hide, .fabSpeedDial md-fab-speed-dial.md-fling.ng-hide {
-  display: flex !important;
-}
-.fabSpeedDial md-fab-speed-dial.md-scale.ng-hide md-fab-trigger, .fabSpeedDial md-fab-speed-dial.md-fling.ng-hide md-fab-trigger {
-  transform: scale(0);
-}
-.md-toolbar-tools {
-  margin-right: 50px;
-}
-.divider {
-  left: 50%;
-  top: 10%;
-  bottom: 10%;
-  height: 50px;
-  border-left: 1px solid white;
-}
 img {
   height: 40%;
   width: auto;
   margin-right: 10px;
 }
-
-/*===============================  Defaults ==================================*/
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-body {
-  padding: 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-
-.header, .footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  width: 100%;
+  background-image: url("../images/banner/Downtown_Grand_Rapids_from_River_House.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s linear all;
+  -moz-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
 }
-
-/* Make the masthead heading the same height as the navigation */
-
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+.big {
+  height: 100%;
 }
-
-/* Custom page footer */
-
+.small {
+  height: 130px;
+}
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  margin: 15px;
+  height: 200px;
+  background-color: #006064;
 }
-.container-narrow > hr {
-  margin: 30px 0;
+.filler {
+  height: 135px;
 }
-
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-  /* Remove the padding we set earlier */
-  .header, .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+.meetup {
+  position: fixed;
+  display: inline-block;
+  right: 50px;
+  bottom: 50px;
+}
+section.main {
+  margin: 15px;
+  background-color: #E0F7FA;
+  height: 2000px;
+}
+section.about {
+  height: 1000px;
+}
+section.sponsors {
+  height: 1000px;
+}
+.fabSpeedDial md-fab-speed-dial {
+  position: absolute;
+  float: right;
+  right: 70px;
+  top: 94px;
+}
+#menu-button {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+}
+#menu-button:hover {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
