@@ -18,7 +18,11 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="header" ng-class="header" layout="row" ng-cloak>
+  <div class="header-background" ng-class="header" ng-cloak></div>
+  <div class="header-background-filter" ng-style="opacity" ng-class="header" ng-cloak>
+    <img ng-hide="isHeaderMinimized" src="images/banner/GDG_square_lg.png" alt="GDG Logo">
+  </div>
+  <div class="header" layout="row" ng-cloak>
     <div class="md-toolbar-tools" layout="row">
       <img src="images/banner/GDG_square_lg.png" alt="GDG Logo">
       <h2>
@@ -47,12 +51,9 @@
       </md-fab-speed-dial>
     </div>
   </div>
-  <div class="filler">
-  </div>
-  <div ng-view="">
-  </div>
-  <div class="footer">
-  </div>
+  <div class="filler"></div>
+  <div ng-view=""></div>
+  <div class="footer"></div>
   <div class="meetup">
     <md-button class="md-raised md-warn" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">Meetup</md-button>
   </div>
