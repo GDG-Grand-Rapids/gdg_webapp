@@ -38,15 +38,16 @@ angular.module('gdgWebappApp', [
         if ($window.pageYOffset > 0) {
           $scope.header = 'small';
           $scope.isHeaderMinimized = true;
+          $scope.opacity = {
+            'opacity': 1
+          };
         } else {
           $scope.header = 'big';
           $scope.isHeaderMinimized = false;
+          $scope.opacity = {
+            'opacity': 0.5
+          };
         }
-        $scope.opacity = function() {
-          var max = $document.innerHeight - $window.innerHeight;
-          var opacity = 1 - ($window.pageYOffset / max);
-          return opacity;
-        };
         $scope.$apply();
       });
 
