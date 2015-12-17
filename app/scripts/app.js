@@ -7,10 +7,6 @@ angular.module('gdgWebappApp', [
   .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
     var self = this;
 
-    self.hidden = false;
-    self.isOpen = false;
-    self.hover = false;
-
     self.items = [{
       name: 'Twitter',
       icon: 'images/icons/twitter.svg',
@@ -27,29 +23,32 @@ angular.module('gdgWebappApp', [
       name: 'Facebook',
       icon: 'images/icons/facebook.svg',
       url: 'https://www.facebook.com/gdggrandrapids'
+    }, {
+      name: 'Meetup',
+      icon: 'images/icons/calendar-check.svg',
+      url: 'http://www.meetup.com/GDG-Grand-Rapids/'
     }];
 
-    $scope.header = 'big';
-    $scope.isHeaderMinimized = false;
-    angular.element($window).bind(
-      'scroll',
-      function() {
-        console.log($window.pageYOffset);
-        if ($window.pageYOffset > 0) {
-          $scope.header = 'small';
-          $scope.isHeaderMinimized = true;
-          $scope.opacity = {
-            'opacity': 1
-          };
-        } else {
-          $scope.header = 'big';
-          $scope.isHeaderMinimized = false;
-          $scope.opacity = {
-            'opacity': 0.5
-          };
-        }
-        $scope.$apply();
-      });
+    // $scope.isHeaderMinimized = false;
+    // $scope.header = 'header';
+    // angular.element($window).bind(
+    //   'scroll',
+    //   function() {
+    //     if ($window.pageYOffset > 1000) {
+    //       $scope.isHeaderMinimized = true;
+    //       $scope.header = 'toolbar-scroll';
+    //       $scope.opacity = {
+    //         'opacity': 1
+    //       };
+    //     } else {
+    //       $scope.isHeaderMinimized = false;
+    //       $scope.header = 'header';
+    //       $scope.opacity = {
+    //         'opacity': 0.7
+    //       };
+    //     }
+    //     $scope.$apply();
+    //   });
 
     $scope.gotoLocation = function() {
       $location.hash('content');
