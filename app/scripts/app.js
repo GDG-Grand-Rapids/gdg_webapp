@@ -4,7 +4,7 @@ angular.module('gdgWebappApp', [
     'ngMaterial',
     'ngRoute'
   ])
-  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
+  .controller('AppCtrl', function ($document, $scope, $location, $window, $anchorScroll) {
     var self = this;
 
     self.items = [{
@@ -50,16 +50,16 @@ angular.module('gdgWebappApp', [
     //     $scope.$apply();
     //   });
 
-    $scope.gotoLocation = function() {
+    $scope.gotoLocation = function () {
       $location.hash('content');
       $anchorScroll();
     };
 
-    $scope.go = function(url) {
+    $scope.go = function (url) {
       $location.path(url);
     };
   })
-  .config(function($routeProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

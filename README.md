@@ -10,3 +10,13 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Dependencies
+
+* npm
+    * grunt
+        * grunt-karma
+            * karma
+            * phantomjs
+            * jasmine-core
+    * bower
