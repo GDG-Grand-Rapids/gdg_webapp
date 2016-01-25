@@ -3,7 +3,7 @@
   display: inline;
   padding-top: 100px;
   padding-left: 200px;
-  padding-right: 200px;
+  padding-right: 200px
 }
 #header-background-img {
   width: 100%;
@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-filter: blur(6px);
+  -webkit-filter: blur(6px)
 }
 #header-background-logo {
   width: auto;
@@ -21,107 +21,84 @@
   position: absolute;
   display: block;
   opacity: .3;
-  -webkit-filter: blur(6px);
+  -webkit-filter: blur(6px)
+}
+#filter, #img-container h2, .header {
+  width: 100%;
+  height: 100%
 }
 #googliness {
   display: block;
   text-align: left;
   font-size: 70px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 900;
-  margin-top: 15%;
+  margin-top: 15%
+}
+#definition, #noun {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin-top: 15%
 }
 #noun {
   display: inline;
   text-align: center;
   font-size: 25px;
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  margin-top: 15%;
+  font-style: italic
 }
-#definition {
+#definition, #img-container h2 {
   display: inline;
   text-align: center;
-  font-size: 30px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  margin-top: 15%;
-}
-.cards {
-  margin: 200px;
+  font-size: 30px
 }
 #img-container {
   display: inline-block;
-  position: relative;
+  position: relative
 }
 #filter {
   background: #006064;
   opacity: .7;
   display: inline;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: absolute
 }
 #img-container h2 {
-  display: inline;
   position: absolute;
-  text-align: center;
   padding-top: 150px;
-  font-size: 30px;
-  width: 100%;
-  height: 100%;
-  color: #fff;
+  color: #fff
+}
+.cards {
+  margin: 200px
 }
 .header {
-  width: 100%;
-  height: 100%;
   color: #fff;
   top: 0;
-  left: 0;
+  left: 0
 }
 .md-toolbar-tools img {
   height: 150%;
   padding-top: 56px;
-  margin: 10px;
+  margin: 10px
 }
-/*.toolbar-scroll {
-  width: 100%;
-  height: 130px;
-  position: fixed;
-  color: #fff;
-  top: 0;
-  left: 0;
-}*/
 .footer {
   margin: 15px;
   height: 200px;
-  background-color: #006064;
+  background-color: #006064
 }
-section.main {
-  height: 2000px;
-}
-section.about {
-  height: 2000px;
-}
-section.sponsors {
-  height: 2000px;
+section.about, section.main, section.sponsors {
+  height: 2000px
 }
 .fabSpeedDial md-fab-speed-dial {
   position: fixed;
   float: right;
   right: 70px;
-  bottom: 70px;
+  bottom: 70px
+}
+#menu-button-icon {
+  margin-bottom: 20px;
 }
 #menu-button {
-  -webkit-transition: -webkit-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  -o-transition: -o-transform 1s;
-  transition: transform 1s;
+  transition: transform 1s
 }
 #menu-button:hover {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transform: rotate(180deg)
 }
