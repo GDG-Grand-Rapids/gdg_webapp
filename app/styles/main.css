@@ -13,16 +13,6 @@
   left: 0;
   -webkit-filter: blur(6px)
 }
-#header-background-logo {
-  width: auto;
-  height: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  display: block;
-  opacity: .3;
-  -webkit-filter: blur(6px)
-}
 #filter, #img-container h2, .header {
   width: 100%;
   height: 100%
@@ -52,8 +42,12 @@
   font-size: 30px
 }
 #img-container {
-  display: inline-block;
-  position: relative
+  position: relative;
+}
+#img-container h2 {
+  position: absolute;
+  padding-top: 150px;
+  color: #fff
 }
 #filter {
   background: #006064;
@@ -61,40 +55,24 @@
   display: inline;
   position: absolute
 }
-#img-container h2 {
-  position: absolute;
-  padding-top: 150px;
-  color: #fff
-}
 .cards {
-  margin: 200px
+  margin: 100px;
 }
 .header {
   color: #fff;
   top: 0;
   left: 0
 }
-.md-toolbar-tools img {
-  height: 150%;
-  padding-top: 56px;
-  margin: 10px
-}
 .footer {
   margin: 15px;
   height: 200px;
   background-color: #006064
-}
-section.about, section.main, section.sponsors {
-  height: 2000px
 }
 .fabSpeedDial md-fab-speed-dial {
   position: fixed;
   float: right;
   right: 70px;
   bottom: 70px
-}
-#menu-button-icon {
-  margin-bottom: 20px;
 }
 #menu-button {
   transition: transform 1s
