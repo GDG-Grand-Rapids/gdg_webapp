@@ -2,15 +2,45 @@
 
 angular.module('gdgWebappApp', [
     'ngMaterial',
-    'ngRoute'
+    'ngRoute',
+    'uiGmapgoogle-maps'
   ])
   .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
     var self = this;
+
+    $scope.map = {center: {latitude: 42.964411, longitude: -85.677043 }, zoom: 14 };
+
+    $scope.marker = {
+      id: 0,
+      coords: {
+        latitude: 42.964411,
+        longitude: -85.677043
+      }
+    };
 
     $scope.gotoLocation = function() {
       $location.hash('content');
       $anchorScroll();
     };
+
+    self.organizersRow1 = [{
+      name: 'Dan McCracken',
+      title: 'Title'
+    }, {
+      name: 'Dan Mikita',
+      title: 'Title'
+    }, {
+      name: 'Jeff Ekdom',
+      title: 'Title'
+    }];
+
+    self.organizersRow2 = [{
+      name: 'Alex Oakley',
+      title: 'Title'
+    }, {
+      name: 'Jeff Williams',
+      title: 'Title'
+    }];
 
     self.items = [{
       name: 'Twitter',
@@ -43,22 +73,27 @@ angular.module('gdgWebappApp', [
       $location.path(url);
     };
   })
-  .config(function($routeProvider) {
+  .config(function($routeProvider, uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        //    key: 'your api key',
+        v: '3.20', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
+    });
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
       .when('/sponsors', {
         templateUrl: 'views/sponsors.html',
         controller: 'SponsorCtrl',
         controllerAs: 'sponsors'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .when('/contact', {
         templateUrl: 'views/contacts.html'

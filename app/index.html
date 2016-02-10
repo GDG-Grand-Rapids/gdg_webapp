@@ -36,9 +36,20 @@
     <div class="md-toolbar-tools">
       <span flex></span>
       <md-button md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
-      <md-button md-no-ink ng-click="go('/about'); gotoLocation()">About Us</md-button>
       <md-button md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
-      <md-button md-no-ink ng-click="go('/contact'); gotoLocation()">Contact Us</md-button>
+      <md-button md-no-ink ng-click="go('/about'); gotoLocation()">About Us</md-button>
+      <md-button md-no-ink ng-click="go('/contact'); gotoLocation()">Contact</md-button>
+      <div id="paypal-button">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
+          <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <md-tooltip md-direction="bottom">
+          Donate Now
+        </md-tooltip>
+      </div>
     </div>
   </div>
   <div class="fabSpeedDial">
@@ -64,16 +75,88 @@
       </md-fab-actions>
     </md-fab-speed-dial>
   </div>
-  <div id="content"></div>
-  <div ng-view=""></div>
-  <div class="footer">
-    <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form> -->
+  <div id="content" layout="column">
+    <div layout="row" class="events cards">
+      <md-card>
+        <div id="img-container">
+          <div id="filter"></div>
+          <h2 class="md-title">Google I/O</h2>
+          <img ng-src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" class="md-card-image" alt="Background">
+        </div>
+        <md-card-content>
+          <p>Google I/O is two days of inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products. I/O Extended Grand Rapids is a watch-party for creative developers brought to you by Google, plus a full-fledged
+            conference where you can attend breakout sessions with code labs, live speakers, and more.</p>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+          <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
+        </ui-gmap-google-map>
+        <md-card-content>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="sponsors">
+
+    </div>
+    <div class="about cards" layout="column">
+      <div layout="row" layout-xs="column" layout-align="center">
+        <div class="portrait-container" layout="column" ng-repeat="organizer in app.organizersRow1">
+          <div class="circle-container">
+            <div class="circle">
+              <img class="front" ng-src="images/portraits/stock_photo_portrait.png">
+              <div class="back">
+                <p>{{organizer.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="portrait-name">{{organizer.name}}</div>
+        </div>
+      </div>
+      <div class="portrait-bottom-row" layout="row" layout-xs="column" layout-align="center">
+        <div class="portrait-container" layout="column" ng-repeat="organizer in app.organizersRow2">
+          <div class="circle-container">
+            <div class="circle">
+              <img class="front" ng-src="images/portraits/stock_photo_portrait.png">
+              <div class="back">
+                <p>{{organizer.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="portrait-name">{{organizer.name}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact" layout="row" layout-align="center">
+      <md-whiteframe class="md-whiteframe-2dp contact-form" layout-align="center">
+        <md-content class="autoScroll">
+          <md-input-container class="md-icon-float md-block">
+            <!-- Use floating label instead of placeholder -->
+            <label>Name</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+            <input ng-model="user.name" type="text">
+          </md-input-container>
+          <md-input-container class="md-block">
+            <!-- Use floating placeholder instead of label -->
+            <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+            <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+          </md-input-container>
+          <md-input-container class="md-icon-float md-block">
+            <!-- Use floating label instead of placeholder -->
+            <label>Subject</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+            <input ng-model="user.name" type="text">
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Message</label>
+            <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+          </md-input-container>
+          <md-button>Submit</md-button>
+        </md-content>
+      </md-whiteframe>
+    </div>
   </div>
+  <div class="footer"></div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
@@ -98,6 +181,9 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
