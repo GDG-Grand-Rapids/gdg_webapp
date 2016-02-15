@@ -5,17 +5,22 @@ angular.module('gdgWebappApp', [
     'ngRoute',
     'uiGmapgoogle-maps'
   ])
-  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
+  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll, $timeout, $mdSidenav, $log) {
     var self = this;
 
-    $scope.map = {center: {latitude: 42.964411, longitude: -85.677043 }, zoom: 14 };
+    function buildToggler(navID) {
+      return function() {
+        $mdSidenav(navID)
+          .toggle()
+          .then(function () {
+            $log.debug('toggle ' + navID + ' is done');
+          });
+      };
+    }
 
-    $scope.marker = {
-      id: 0,
-      coords: {
-        latitude: 42.964411,
-        longitude: -85.677043
-      }
+    $scope.toggleLeft = buildToggler('left');
+    $scope.isOpenLeft = function(){
+      return $mdSidenav('left').isOpen();
     };
 
     $scope.gotoLocation = function() {
@@ -71,6 +76,14 @@ angular.module('gdgWebappApp', [
 
     $scope.go = function(url) {
       $location.path(url);
+    };
+  })
+  .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.close = function () {
+      $mdSidenav('left').close()
+        .then(function () {
+          $log.debug('close LEFT is done');
+        });
     };
   })
   .config(function($routeProvider, uiGmapGoogleMapApiProvider) {

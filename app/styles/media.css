@@ -1,0 +1,14 @@
+.menu-button {
+  display: block;;
+}
+.menu-items {
+  display: none;
+}
+#paypal-button {
+  display: none;
+}
+#header-text {
+  font-size: 40px;
+  left: 10px;
+  top: 80px;
+}

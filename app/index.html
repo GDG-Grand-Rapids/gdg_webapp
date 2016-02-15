@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="styles/media.css">
   <!-- endbuild -->
 </head>
 
@@ -20,38 +22,45 @@
 
   <!-- Add your site or application content here -->
   <div class="header">
-    <div>
-      <img id="header-background-img" src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" alt="GDG Background">
-      <!-- <img id="header-background-img" src="images/banner/Downtown_Grand_Rapids_from_River_House.a78155ff.jpg" alt="GDG Background"> -->
-      <!-- <img id="header-background-logo" src="images/banner/GDG_square_lg.png" alt="GDG Logo"> -->
-      <div id="filter"></div>
-      <div class="header-background-text">
-        <div id="googliness">goo·gli·ness</div>
-        <div id="noun">noun</div>
-        <br/>
-        <br/>
-        <div id="definition">the intangibles that set a person aside from the rest of the pack. Your ability to explore the limits of your own creativity and the self motivation to consistently do so without exterior influences.</div>
+    <md-toolbar class="md-tall">
+      <div id="header-text" layout="row">
+        <div id="header-text-gdg">GDG</div>
+        <div id="header-text-grand-rapids">Grand Rapids</div>
       </div>
-    </div>
-    <div class="md-toolbar-tools">
-      <span flex></span>
-      <md-button md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
-      <md-button md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
-      <md-button md-no-ink ng-click="go('/about'); gotoLocation()">About Us</md-button>
-      <md-button md-no-ink ng-click="go('/contact'); gotoLocation()">Contact</md-button>
-      <div id="paypal-button">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
-          <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
-        <md-tooltip md-direction="bottom">
-          Donate Now
-        </md-tooltip>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleLeft()" ng-hide="isOpenLeft()" class="md-primary" aria-label="Settings">
+          <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
+        </md-button>
+        <span flex></span>
+        <md-button class="menu-items" md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
+        <md-button class="menu-items" md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
+        <md-button class="menu-items" md-no-ink ng-click="go('/about'); gotoLocation()">About Us</md-button>
+        <md-button class="menu-items" md-no-ink ng-click="go('/contact'); gotoLocation()">Contact</md-button>
+        <div id="paypal-button">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
+            <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          <md-tooltip md-direction="bottom">
+            Donate Now
+          </md-tooltip>
+        </div>
       </div>
-    </div>
+    </md-toolbar>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+      </md-toolbar>
+      <md-content ng-controller="LeftCtrl" layout-padding>
+        <md-button ng-click="close()" class="md-primary">
+          Close Sidenav Left
+        </md-button>
+      </md-content>
+    </md-sidenav>
   </div>
+
   <div class="fabSpeedDial">
     <md-fab-speed-dial ng-hide="app.hidden" md-direction="up" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
       <md-fab-trigger>
@@ -75,30 +84,24 @@
       </md-fab-actions>
     </md-fab-speed-dial>
   </div>
-  <div id="content" layout="column">
-    <div layout="row" class="events cards">
-      <md-card>
-        <div id="img-container">
-          <div id="filter"></div>
-          <h2 class="md-title">Google I/O</h2>
-          <img ng-src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" class="md-card-image" alt="Background">
-        </div>
-        <md-card-content>
-          <p>Google I/O is two days of inspirational talks, hands-on learning, and a chance to hear more about Google's latest developer products. I/O Extended Grand Rapids is a watch-party for creative developers brought to you by Google, plus a full-fledged
-            conference where you can attend breakout sessions with code labs, live speakers, and more.</p>
-        </md-card-content>
-      </md-card>
-      <md-card>
-        <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
-          <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker>
-        </ui-gmap-google-map>
-        <md-card-content>
-        </md-card-content>
-      </md-card>
-    </div>
-    <div class="sponsors">
 
+  <md-divider></md-divider>
+
+  <div id="content">
+    <div id="img-container">
+      <div id="filter"></div>
+      <h2 class="md-title">Google I/O</h2>
+      <img ng-src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" class="md-card-image" alt="Background">
     </div>
+    <div id="map-container">
+      <md-button id="map-directions-button" class="md-fab" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US" target="_blank" aria-label="Directions">
+        <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+      </md-button>
+      <div id="map"></div>
+    </div>
+
+    <md-divider></md-divider>
+
     <div class="about cards" layout="column">
       <div layout="row" layout-xs="column" layout-align="center">
         <div class="portrait-container" layout="column" ng-repeat="organizer in app.organizersRow1">
@@ -127,6 +130,9 @@
         </div>
       </div>
     </div>
+
+    <md-divider></md-divider>
+
     <div class="contact" layout="row" layout-align="center">
       <md-whiteframe class="md-whiteframe-2dp contact-form" layout-align="center">
         <md-content class="autoScroll">
@@ -156,6 +162,7 @@
       </md-whiteframe>
     </div>
   </div>
+
   <div class="footer"></div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -186,6 +193,52 @@
   <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
+
+  <script>
+    function initMap() {
+      var styles = [{
+        stylers: [{
+          hue: "#006064"
+        }, {
+          saturation: -75
+        }]
+      }];
+      var styledMap = new google.maps.StyledMapType(styles, {
+        name: "Styled Map"
+      });
+      var myLatLng = {
+        lat: 42.964411,
+        lng: -85.677043
+      };
+      var mapOptions = {
+        zoom: 15,
+        center: myLatLng,
+        draggable: false,
+        scrollwheel: false,
+        scaleControl: true,
+        zoomControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP
+        },
+        streetViewControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP
+        },
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
+      };
+      var map = new google.maps.Map(document.getElementById('map'),
+        mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Google I/O'
+      });
+      map.mapTypes.set('map_style', styledMap);
+      map.setMapTypeId('map_style');
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>

@@ -1,3 +1,6 @@
+.menu-button {
+  display: none;
+}
 .header-background-text {
   position: absolute;
   display: inline;
@@ -41,8 +44,25 @@
   text-align: center;
   font-size: 30px
 }
-#img-container {
-  position: relative;
+#header-text {
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Product Sans', Arial, sans-serif;
+  color: #fff;
+  left: 40px;
+  top: 20px;
+}
+#header-text #header-text-gdg {
+  font-weight: bolder;
+  margin-right: 20px;
+}
+#header-text #header-text-grand-rapids {
+  font-weight: lighter;
+}
+#img-container img {
+  height: 500px;
+  width: 100%;
 }
 #img-container h2 {
   position: absolute;
@@ -123,9 +143,18 @@
 .contact-form {
   width: 60%;
 }
-.angular-google-map-container {
-  width: 500px;
+#map-container {
+  width: 100%;
   height: 500px;
+}
+#map {
+  width: auto;
+  height: 100%;
+}
+#map-directions-button {
+  position: absolute;
+  margin-top: 400px;
+  right: 10px;
 }
 md-input-container {
   margin: 50px;
