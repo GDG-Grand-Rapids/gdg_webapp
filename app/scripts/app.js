@@ -5,23 +5,8 @@ angular.module('gdgWebappApp', [
     'ngRoute',
     'uiGmapgoogle-maps'
   ])
-  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll, $timeout, $mdSidenav, $log) {
+  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
     var self = this;
-
-    function buildToggler(navID) {
-      return function() {
-        $mdSidenav(navID)
-          .toggle()
-          .then(function () {
-            $log.debug('toggle ' + navID + ' is done');
-          });
-      };
-    }
-
-    $scope.toggleLeft = buildToggler('left');
-    $scope.isOpenLeft = function(){
-      return $mdSidenav('left').isOpen();
-    };
 
     $scope.gotoLocation = function() {
       $location.hash('content');
@@ -78,20 +63,26 @@ angular.module('gdgWebappApp', [
       $location.path(url);
     };
   })
-  .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.close = function () {
-      $mdSidenav('left').close()
-        .then(function () {
-          $log.debug('close LEFT is done');
-        });
-    };
-  })
-  .config(function($routeProvider, uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-        //    key: 'your api key',
-        v: '3.20', //defaults to latest 3.X anyhow
-        libraries: 'weather,geometry,visualization'
+  .config(function($routeProvider, $mdThemingProvider) {
+    $mdThemingProvider.definePalette('gdgPalette', {
+      '50': 'ffffff',
+      '100': 'B2DFDB',
+      '200': '80CBC4',
+      '300': '4DB6AC',
+      '400': '26A69A',
+      '500': '006064',
+      '600': '00897B',
+      '700': '00796B',
+      '800': '00695C',
+      '900': '004D40',
+      'A100': 'A7FFEB',
+      'A200': '64FFDA',
+      'A400': '1DE9B6',
+      'A700': '00BFA5'
     });
+    $mdThemingProvider.theme('default')
+      .primaryPalette('gdgPalette');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

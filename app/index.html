@@ -22,15 +22,11 @@
 
   <!-- Add your site or application content here -->
   <div class="header">
-    <md-toolbar class="md-tall">
-      <div id="header-text" layout="row">
-        <div id="header-text-gdg">GDG</div>
-        <div id="header-text-grand-rapids">Grand Rapids</div>
+    <md-toolbar>
+      <div id="header-gdg-logo">
+        <img ng-src="images/banner/gdg-logo.png" alt="Background">
       </div>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" ng-click="toggleLeft()" ng-hide="isOpenLeft()" class="md-primary" aria-label="Settings">
-          <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
-        </md-button>
+      <div id="toolbar" class="md-toolbar-tools">
         <span flex></span>
         <md-button class="menu-items" md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
         <md-button class="menu-items" md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
@@ -47,26 +43,18 @@
             Donate Now
           </md-tooltip>
         </div>
+        <md-button class="md-icon-button md-toolbar-tools-collapse" aria-label="More">
+          <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
+        </md-button>
       </div>
     </md-toolbar>
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-      <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
-      </md-toolbar>
-      <md-content ng-controller="LeftCtrl" layout-padding>
-        <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Left
-        </md-button>
-      </md-content>
-    </md-sidenav>
   </div>
 
-  <div class="fabSpeedDial">
+  <!-- <div class="fabSpeedDial">
     <md-fab-speed-dial ng-hide="app.hidden" md-direction="up" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
       <md-fab-trigger>
         <md-button aria-label="menu" id="menu-button" class="md-fab md-warn">
           <md-icon md-svg-src="images/icons/menu.svg" id="menu-button-icon" aria-label="menu"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/menu.6f614ff8.svg" id="menu-button-icon" aria-label="menu"></md-icon> -->
           <md-tooltip md-direction="left">
             Social Media
           </md-tooltip>
@@ -83,26 +71,37 @@
         </div>
       </md-fab-actions>
     </md-fab-speed-dial>
-  </div>
+  </div> -->
 
   <md-divider></md-divider>
 
   <div id="content">
-    <div id="img-container">
+    <!-- <div id="img-container">
       <div id="filter"></div>
       <h2 class="md-title">Google I/O</h2>
       <img ng-src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" class="md-card-image" alt="Background">
-    </div>
+    </div> -->
     <div id="map-container">
-      <md-button id="map-directions-button" class="md-fab" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US" target="_blank" aria-label="Directions">
+      <md-button id="map-directions-button" class="md-fab" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
+        target="_blank" aria-label="Directions">
         <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
       </md-button>
+      <div id="map-text">
+        <p>
+          <div id="map-text-header">Google I/O Extended GR</div>
+          <br/>
+          <div id="map-text-body">May 18th</div>
+          <br/>
+          <br/>
+          <div id="map-text-body">Eberhard Center GVSU</div>
+        </p>
+      </div>
       <div id="map"></div>
     </div>
 
     <md-divider></md-divider>
 
-    <div class="about cards" layout="column">
+    <!-- <div class="about" layout="column">
       <div layout="row" layout-xs="column" layout-align="center">
         <div class="portrait-container" layout="column" ng-repeat="organizer in app.organizersRow1">
           <div class="circle-container">
@@ -129,26 +128,23 @@
           <div class="portrait-name">{{organizer.name}}</div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <md-divider></md-divider>
 
-    <div class="contact" layout="row" layout-align="center">
+    <!-- <div class="contact" layout="row" layout-align="center">
       <md-whiteframe class="md-whiteframe-2dp contact-form" layout-align="center">
         <md-content class="autoScroll">
           <md-input-container class="md-icon-float md-block">
-            <!-- Use floating label instead of placeholder -->
             <label>Name</label>
             <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
             <input ng-model="user.name" type="text">
           </md-input-container>
           <md-input-container class="md-block">
-            <!-- Use floating placeholder instead of label -->
             <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
             <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
           </md-input-container>
           <md-input-container class="md-icon-float md-block">
-            <!-- Use floating label instead of placeholder -->
             <label>Subject</label>
             <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
             <input ng-model="user.name" type="text">
@@ -160,7 +156,7 @@
           <md-button>Submit</md-button>
         </md-content>
       </md-whiteframe>
-    </div>
+    </div> -->
   </div>
 
   <div class="footer"></div>
@@ -217,15 +213,16 @@
         scrollwheel: false,
         scaleControl: true,
         zoomControlOptions: {
-          position: google.maps.ControlPosition.LEFT_TOP
+          position: google.maps.ControlPosition.LEFT_BOTTOM
         },
         streetViewControlOptions: {
-          position: google.maps.ControlPosition.LEFT_TOP
+          position: google.maps.ControlPosition.LEFT_BOTTOM
         },
         mapTypeControlOptions: {
           mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
         }
       };
+      var mapText = document.getElementById('map-text');
       var map = new google.maps.Map(document.getElementById('map'),
         mapOptions);
       var marker = new google.maps.Marker({
@@ -235,6 +232,7 @@
       });
       map.mapTypes.set('map_style', styledMap);
       map.setMapTypeId('map_style');
+      map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
     }
   </script>
 

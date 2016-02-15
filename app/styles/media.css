@@ -1,5 +1,5 @@
-.menu-button {
-  display: block;;
+.md-toolbar-tools-collapse {
+  display: block;
 }
 .menu-items {
   display: none;
@@ -7,8 +7,8 @@
 #paypal-button {
   display: none;
 }
-#header-text {
-  font-size: 40px;
-  left: 10px;
-  top: 80px;
+#header-gdg-logo img {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
 }
