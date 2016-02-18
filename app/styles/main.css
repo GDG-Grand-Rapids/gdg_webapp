@@ -1,3 +1,51 @@
+/* General Content */
+
+#intro-container {
+  text-align: center;
+  color: #006064;
+}
+#intro-container #title {
+  font-family: 'Product Sans', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  font-style: italic;
+}
+#intro-container #body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+}
+#event-container {
+  text-align: center;
+  color: #006064;
+}
+#event-container #title {
+  font-family: 'Product Sans', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  font-style: italic;
+}
+#event-container #body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+}
+#sponsors-container {
+  text-align: center;
+  color: #006064;
+}
+#sponsors-container #title {
+  font-family: 'Product Sans', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  font-style: italic;
+}
+#sponsors-container #body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+}
+#sponsorship-packet-button {
+  padding: 10px;
+  color: #fff;
+}
 .md-toolbar-tools-collapse {
   display: none;
 }
@@ -14,24 +62,6 @@
   width: 100%;
   height: auto;
 }
-#filter, #img-container h2, .header {
-  width: 100%;
-  height: 100%
-}
-#img-container h2 {
-  display: inline;
-  text-align: center;
-  font-size: 30px
-}
-#img-container img {
-  height: 500px;
-  width: 100%;
-}
-#img-container h2 {
-  position: absolute;
-  padding-top: 150px;
-  color: #fff
-}
 #paypal-button {
   position: relative;
   height: 25px;
@@ -41,15 +71,32 @@
   height: 100%;
   width: 100%;
 }
-#filter {
-  background: #006064;
-  opacity: .7;
-  display: inline;
-  position: absolute
+.header {
+  width: 100%;
+  height: 100%
 }
-md-toolbar {
-  height: 100%;
+.footer {
+  margin: 15px;
+  height: 200px;
+  background-color: #006064
 }
+
+/* Calendar */
+
+#calendar {
+  display: none;
+  background-color: #006064;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+#calendar div {
+  margin: 10px;
+}
+
+/* Revolving Circle Portraits */
+
 .portrait-container {
   margin: auto;
 }
@@ -106,9 +153,9 @@ md-toolbar {
   display: block;
   margin: 2em auto;
 }
-.contact-form {
-  width: 60%;
-}
+
+/* Map Elements */
+
 #map-container {
   width: 100%;
   height: 600px;
@@ -125,41 +172,64 @@ md-toolbar {
   font-size: 80px;
   background-color: #006064;
 }
-#map-text-body {
+.map-text-body {
   display: inline-block;
   font-size: 50px;
   background-color: #006064;
 }
+#event-date-text:hover + #calendar {
+  display: flex;
+  transition: height 0.5s;
+}
+#event-date-text:hover + #event-location-text {
+  display: none;
+}
 #map-directions-button {
   position: absolute;
-  margin-top: 400px;
+  margin-top: 500px;
   right: 10px;
 }
-md-input-container {
-  margin: 50px;
-}
-.cards {
-  margin: 100px;
-}
-.header {
-  color: #fff;
-  top: 0;
-  left: 0
-}
-.footer {
-  margin: 15px;
-  height: 200px;
-  background-color: #006064
-}
+
+/* FAB Button */
+
 .fabSpeedDial md-fab-speed-dial {
-  position: fixed;
   float: right;
   right: 70px;
-  bottom: 70px
+  bottom: 36px
 }
 #menu-button {
   transition: transform 1s
 }
 #menu-button:hover {
   transform: rotate(180deg)
+}
+
+/* Countdown Clock */
+
+#countdown-clock-container{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#countdown-clock-container > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#countdown-clock-container div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #00816A;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
 }

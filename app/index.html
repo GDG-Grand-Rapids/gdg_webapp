@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Product+Sans'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand'>
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="styles/media.css">
@@ -48,58 +49,160 @@
         </md-button>
       </div>
     </md-toolbar>
-  </div>
-
-  <!-- <div class="fabSpeedDial">
-    <md-fab-speed-dial ng-hide="app.hidden" md-direction="up" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
-      <md-fab-trigger>
-        <md-button aria-label="menu" id="menu-button" class="md-fab md-warn">
-          <md-icon md-svg-src="images/icons/menu.svg" id="menu-button-icon" aria-label="menu"></md-icon>
-          <md-tooltip md-direction="left">
-            Social Media
-          </md-tooltip>
-        </md-button>
-      </md-fab-trigger>
-      <md-fab-actions>
-        <div ng-repeat="item in app.items">
-          <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-href="{{item.url}}" target="_blank">
-            <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+    <!-- <div class="fabSpeedDial">
+      <md-fab-speed-dial ng-hide="app.hidden" md-direction="down" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
+        <md-fab-trigger>
+          <md-button aria-label="menu" id="menu-button" class="md-fab md-warn">
+            <md-icon md-svg-src="images/icons/menu.svg" id="menu-button-icon" aria-label="menu"></md-icon>
             <md-tooltip md-direction="left">
-              {{item.name}}
+              Social Media
             </md-tooltip>
           </md-button>
-        </div>
-      </md-fab-actions>
-    </md-fab-speed-dial>
-  </div> -->
-
-  <md-divider></md-divider>
+        </md-fab-trigger>
+        <md-fab-actions>
+          <div ng-repeat="item in app.items">
+            <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-href="{{item.url}}" target="_blank">
+              <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+              <md-tooltip md-direction="left">
+                {{item.name}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-fab-actions>
+      </md-fab-speed-dial>
+    </div> -->
+  </div>
 
   <div id="content">
-    <!-- <div id="img-container">
-      <div id="filter"></div>
-      <h2 class="md-title">Google I/O</h2>
-      <img ng-src="images/banner/Downtown_Grand_Rapids_from_River_House.jpg" class="md-card-image" alt="Background">
-    </div> -->
+
+    <div id="intro-container">
+      <p id="title">Who We Are</p>
+      <div id="body">
+        <p>Hi! You're meeting us for the first time. And we're excited!</p>
+        <p>We love technology and are guessing you do too!</p>
+        <p>Google Developer Groups (GDGs) are for developers who are interested in Google's developer technology; everything from the Android, App Engine, and Google Chrome platforms, to product APIs like the Maps API, YouTube API and Google Calendar API.</p>
+      </div>
+    </div>
+
+    <md-divider></md-divider>
+
+    <div id="event-container">
+      <p id="title">Events</p>
+      <div id="body">
+        <p>So there's a couple of things you need to know.</p>
+        <p>One of our events is approaching.</p>
+      </div>
+    </div>
+
     <div id="map-container">
-      <md-button id="map-directions-button" class="md-fab" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
+      <md-button id="map-directions-button" class="md-fab md-primary" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
         target="_blank" aria-label="Directions">
         <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+        <md-tooltip md-direction="left">
+          Directions
+        </md-tooltip>
       </md-button>
       <div id="map-text">
         <p>
           <div id="map-text-header">Google I/O Extended GR</div>
           <br/>
-          <div id="map-text-body">May 18th</div>
+          <div class="map-text-body" id="event-date-text">
+            May 18th
+          </div>
+          <div id="calendar" layout="row">
+            <div layout="row">
+              <div layout="column">
+                SUN
+                <div>1</div>
+                <div>8</div>
+                <div>15</div>
+                <div>22</div>
+                <div>29</div>
+              </div>
+              <div layout="column">
+                MON
+                <div>2</div>
+                <div>9</div>
+                <div>16</div>
+                <div>23</div>
+                <div>30</div>
+              </div>
+              <div layout="column">
+                TUE
+                <div>3</div>
+                <div>10</div>
+                <div>17</div>
+                <div>24</div>
+                <div>31</div>
+              </div>
+              <div layout="column">
+                WED
+                <div>4</div>
+                <div>11</div>
+                <div>18</div>
+                <div>25</div>
+                <div></div>
+              </div>
+              <div layout="column">
+                THU
+                <div>5</div>
+                <div>12</div>
+                <div>19</div>
+                <div>26</div>
+                <div></div>
+              </div>
+              <div layout="column">
+                FRI
+                <div>6</div>
+                <div>13</div>
+                <div>20</div>
+                <div>27</div>
+                <div></div>
+              </div>
+              <div layout="column">
+                SAT
+                <div>7</div>
+                <div>14</div>
+                <div>21</div>
+                <div>28</div>
+                <div></div>
+              </div>
+              <div id="countdown-clock-container">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">Days</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">Seconds</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <br/>
           <br/>
-          <div id="map-text-body">Eberhard Center GVSU</div>
+          <div class="map-text-body" id="event-location-text">Eberhard Center GVSU</div>
         </p>
       </div>
       <div id="map"></div>
     </div>
 
-    <md-divider></md-divider>
+    <div id="sponsors-container">
+      <p id="title">Sponsors</p>
+      <div id="body">
+        <p>Our sponsors are what allows us to bring great content to you. We couldn't do it without them.</p>
+        <p>If your organization is interested in joining our growing list of sponsors, please contact us.</p>
+        <div><md-button id="sponsorship-packet-button" class="md-raised md-primary">Download Our Sponsorship Packet</md-button></div>
+      </div>
+    </div>
 
     <!-- <div class="about" layout="column">
       <div layout="row" layout-xs="column" layout-align="center">
@@ -129,8 +232,6 @@
         </div>
       </div>
     </div> -->
-
-    <md-divider></md-divider>
 
     <!-- <div class="contact" layout="row" layout-align="center">
       <md-whiteframe class="md-whiteframe-2dp contact-form" layout-align="center">
@@ -234,6 +335,56 @@
       map.setMapTypeId('map_style');
       map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
     }
+  </script>
+
+  <script>
+    function getTimeRemaining(endtime) {
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
+
+    function initializeClock(id, endtime) {
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+
+      function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    function parseDate(input) {
+      var parts = input.split('-');
+      // new Date(year, month [, day [, hours[, minutes[, seconds[, ms]]]]])
+      return new Date(parts[0], parts[1] - 1, parts[2]); // Note: months are 0-based
+    }
+
+    var deadline = new Date(parseDate('2016-05-18') + 15 * 24 * 60 * 60 * 1000);
+    initializeClock('countdown-clock-container', deadline);
   </script>
 
   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
