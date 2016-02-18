@@ -79,7 +79,19 @@
 
   <div id="content" ng-view=""></div>
 
-  <div class="footer"></div>
+  <div class="footer" layout="column" layout-align="center center">
+    <div layout="row" id="social-media-buttons">
+      <div ng-repeat="item in app.items">
+        <md-button aria-label="{{item.name}}" class="md-primary md-hue-1" ng-href="{{item.url}}" target="_blank">
+          <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+          <md-tooltip md-direction="top">
+            {{item.name}}
+          </md-tooltip>
+        </md-button>
+      </div>
+    </div>
+    <div>Follow Us</div>
+  </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>

@@ -61,7 +61,12 @@ angular.module('gdgWebappApp', [
       'A700': '00BFA5'
     });
     $mdThemingProvider.theme('default')
-      .primaryPalette('gdgPalette');
+      .primaryPalette('gdgPalette', {
+        'default': '500',
+        'hue-1': '50',
+        'hue-2': '50',
+        'hue-3': '50'
+      });
 
     $routeProvider
       .when('/', {
