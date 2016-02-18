@@ -1,5 +1,8 @@
 /* General Content */
 
+.menu-items {
+  color: #fff;
+}
 #intro-container {
   text-align: center;
   color: #006064;
@@ -42,9 +45,8 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 40px;
 }
-#sponsorship-packet-button {
-  padding: 10px;
-  color: #fff;
+#sponsorship-link-button {
+  font-size: 20px;
 }
 .md-toolbar-tools-collapse {
   display: none;
@@ -81,113 +83,12 @@
   background-color: #006064
 }
 
-/* Calendar */
-
-#calendar {
-  display: none;
-  background-color: #006064;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  position: relative;
-}
-#calendar div {
-  margin: 10px;
-}
-
-/* Revolving Circle Portraits */
-
-.portrait-container {
-  margin: auto;
-}
-.portrait-name {
-  margin: auto;
-  margin-top: 20px;
-  font-weight: bold;
+hr {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   color: #006064;
-}
-.circle-container {
-  perspective: 1000;
-  margin: auto;
-}
-.circle-container:hover .circle {
-  transform: rotate3d(0, 90, 0, 180deg);
-}
-.circle-container, .front, .back {
-  width: 200px;
-  height: 200px;
-}
-.portrait-bottom-row {
-  margin: 100px;
-}
-.circle {
-  transition: 0.5s;
-  transform-style: preserve-3d;
-  transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  -moz-border-radius: 200px/200px;
-  -webkit-border-radius: 200px 200px;
-  border-radius: 200px/200px;
-  border: solid 2px #006064;
-  width: 200px;
-  height: 200px;
-}
-.front, .back {
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  backface-visibility: hidden;
-  position: absolute;
-}
-.back p {
-  margin-top: 50px;
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  text-align: center;
-  color: #fff;
-}
-.back {
-  transform: rotate3d(0, 90, 0, 180deg);
-  background-color: #006064;
-}
-.back-logo {
-  width: 60%;
-  display: block;
-  margin: 2em auto;
-}
-
-/* Map Elements */
-
-#map-container {
-  width: 100%;
-  height: 600px;
-}
-#map {
-  width: auto;
-  height: 100%;
-}
-#map-text {
-  font-family: Roboto, sans-serif;
-  color: #fff;
-}
-#map-text-header {
-  font-size: 80px;
-  background-color: #006064;
-}
-.map-text-body {
-  display: inline-block;
-  font-size: 50px;
-  background-color: #006064;
-}
-#event-date-text:hover + #calendar {
-  display: flex;
-  transition: height 0.5s;
-}
-#event-date-text:hover + #event-location-text {
-  display: none;
-}
-#map-directions-button {
-  position: absolute;
-  margin-top: 500px;
-  right: 10px;
+  opacity: .3;
 }
 
 /* FAB Button */
@@ -202,34 +103,4 @@
 }
 #menu-button:hover {
   transform: rotate(180deg)
-}
-
-/* Countdown Clock */
-
-#countdown-clock-container{
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
-}
-
-#countdown-clock-container > div{
-    padding: 10px;
-    border-radius: 3px;
-    background: #00BF96;
-    display: inline-block;
-}
-
-#countdown-clock-container div > span{
-    padding: 15px;
-    border-radius: 3px;
-    background: #00816A;
-    display: inline-block;
-}
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 16px;
 }

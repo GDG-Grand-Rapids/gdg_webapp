@@ -12,3 +12,6 @@
   width: auto;
   margin-top: 20px;
 }
+#countdown-clock-container {
+  font-size: 40px;
+}

@@ -1,0 +1,25 @@
+<div class="contact" layout="row" layout-align="center" ng-controller="ContactCtrl as contact">
+  <md-whiteframe class="md-whiteframe-2dp contact-form" layout-align="center">
+    <md-content class="autoScroll">
+      <md-input-container class="md-icon-float md-block">
+        <label>Name</label>
+        <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+        <input ng-model="user.name" type="text">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+        <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block">
+        <label>Subject</label>
+        <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+        <input ng-model="user.name" type="text">
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>Message</label>
+        <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+      </md-input-container>
+      <md-button>Submit</md-button>
+    </md-content>
+  </md-whiteframe>
+</div>

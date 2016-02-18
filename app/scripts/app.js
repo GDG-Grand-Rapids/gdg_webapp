@@ -2,35 +2,15 @@
 
 angular.module('gdgWebappApp', [
     'ngMaterial',
-    'ngRoute',
-    'uiGmapgoogle-maps'
+    'ngRoute'
   ])
-  .controller('AppCtrl', function($document, $scope, $location, $window, $anchorScroll) {
+  .controller('AppCtrl', function($scope, $location, $anchorScroll) {
     var self = this;
 
     $scope.gotoLocation = function() {
       $location.hash('content');
       $anchorScroll();
     };
-
-    self.organizersRow1 = [{
-      name: 'Dan McCracken',
-      title: 'Title'
-    }, {
-      name: 'Dan Mikita',
-      title: 'Title'
-    }, {
-      name: 'Jeff Ekdom',
-      title: 'Title'
-    }];
-
-    self.organizersRow2 = [{
-      name: 'Alex Oakley',
-      title: 'Title'
-    }, {
-      name: 'Jeff Williams',
-      title: 'Title'
-    }];
 
     self.items = [{
       name: 'Twitter',
@@ -89,6 +69,11 @@ angular.module('gdgWebappApp', [
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl',
+        controllerAs: 'events'
+      })
       .when('/sponsors', {
         templateUrl: 'views/sponsors.html',
         controller: 'SponsorCtrl',
@@ -100,7 +85,9 @@ angular.module('gdgWebappApp', [
         controllerAs: 'about'
       })
       .when('/contact', {
-        templateUrl: 'views/contacts.html'
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
       })
       .otherwise({
         redirectTo: '/'

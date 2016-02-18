@@ -1,0 +1,77 @@
+/* Calendar */
+
+#calendar {
+  display: none;
+  background-color: #006064;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+#calendar div div {
+  margin: 10px;
+}
+
+/* Map Elements */
+
+#map-container {
+  width: 100%;
+  height: 600px;
+}
+#map {
+  width: auto;
+  height: 100%;
+}
+#map-text {
+  font-family: Roboto, sans-serif;
+  color: #fff;
+}
+#map-text-header {
+  font-size: 80px;
+  background-color: #006064;
+}
+.map-text-body {
+  display: inline-block;
+  font-size: 50px;
+  background-color: #006064;
+}
+#event-date-text:hover + #calendar {
+  display: flex;
+  transition: height 0.5s;
+}
+#event-date-text:hover + #event-location-text {
+  display: none;
+}
+#map-directions-button {
+  position: absolute;
+  margin-top: 500px;
+  right: 10px;
+}
+
+/* Countdown Clock */
+
+#countdown-clock-container {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 200px;
+  margin: 50px;
+}
+#countdown-clock-container > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #006064;
+  display: inline-block;
+}
+#countdown-clock-container div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #006064;
+  display: inline-block;
+}
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
