@@ -2,9 +2,7 @@
 
 angular.module('gdgWebappApp')
   .controller('AboutCtrl', function() {
-    var self = this;
-
-    self.organizersRow1 = [{
+    this.organizersRow1 = [{
       name: 'Dan McCracken',
       title: 'Title'
     }, {
@@ -15,7 +13,7 @@ angular.module('gdgWebappApp')
       title: 'Title'
     }];
 
-    self.organizersRow2 = [{
+    this.organizersRow2 = [{
       name: 'Alex Oakley',
       title: 'Title'
     }, {

@@ -8,10 +8,29 @@
   display: none;
 }
 #header-gdg-logo img {
-  height: 100px;
+  height: 60px;
   width: auto;
-  margin-top: 20px;
 }
 #countdown-clock-container {
   font-size: 40px;
+}
+#social-media-buttons-container {
+  border-bottom: none;
+}
+#social-media-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#follow {
+  display: none;
+}
+.footer {
+  height: 100px;
+}
+.footer div {
+  margin: 0px;
+}
+#toolbar {
+  top: 0px;
+  position: absolute;
 }

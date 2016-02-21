@@ -1,12 +1,3 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name gdgWebappApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the gdgWebappApp
- */
-angular.module('gdgWebappApp')
-  .controller('SponsorCtrl', function () {
-  });
+angular.module('gdgWebappApp').controller('SponsorCtrl', function() {});

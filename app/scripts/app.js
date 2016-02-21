@@ -1,47 +1,48 @@
 'use strict';
 
-angular.module('gdgWebappApp', [
+var app = angular.module('gdgWebappApp', [
     'ngMaterial',
     'ngRoute'
   ])
-  .controller('AppCtrl', function($scope, $location, $anchorScroll) {
-    var self = this;
-
-    $scope.gotoLocation = function() {
-      $location.hash('content');
-      $anchorScroll();
-    };
-
-    self.items = [{
-      name: 'Twitter',
-      // icon: 'images/icons/twitter.a59e6b76.svg',
-      icon: 'images/icons/twitter.svg',
-      url: 'https://www.twitter.com/'
-    }, {
-      name: 'Google Plus',
-      // icon: 'images/icons/google-plus.8f170833.svg',
-      icon: 'images/icons/google-plus.svg',
-      url: 'https://plus.google.com/116106643420425488667/about'
-    }, {
-      name: 'Github',
-      // icon: 'images/icons/github-circle.231d7cad.svg',
-      icon: 'images/icons/github-circle.svg',
-      url: 'https://github.com/GDG-Grand-Rapids'
-    }, {
-      name: 'Facebook',
-      // icon: 'images/icons/facebook.c3e23151.svg',
-      icon: 'images/icons/facebook.svg',
-      url: 'https://www.facebook.com/gdggrandrapids'
-    }, {
-      name: 'Meetup',
-      // icon: 'images/icons/calendar-check.09b470a8.svg',
-      icon: 'images/icons/calendar-check.svg',
-      url: 'http://www.meetup.com/GDG-Grand-Rapids/'
-    }];
-
+  .controller('AppCtrl', function($scope, $location, $window) {
     $scope.go = function(url) {
       $location.path(url);
     };
+
+    $scope.scrollToTop = function(home) {
+      if (home === 'home') {
+        $window.scrollTo(0, 0);
+      } else {
+        $window.scrollTo(0, 1);
+      }
+    };
+
+    this.items = [{
+      name: 'Twitter',
+      icon: 'images/icons/twitter.a59e6b76.svg',
+      // icon: 'images/icons/twitter.svg',
+      url: 'https://twitter.com/ioextendedgr'
+    }, {
+      name: 'Google Plus',
+      icon: 'images/icons/google-plus.8f170833.svg',
+      // icon: 'images/icons/google-plus.svg',
+      url: 'https://plus.google.com/116106643420425488667/about'
+    }, {
+      name: 'Github',
+      icon: 'images/icons/github-circle.231d7cad.svg',
+      // icon: 'images/icons/github-circle.svg',
+      url: 'https://github.com/GDG-Grand-Rapids'
+    }, {
+      name: 'Facebook',
+      icon: 'images/icons/facebook.c3e23151.svg',
+      // icon: 'images/icons/facebook.svg',
+      url: 'https://www.facebook.com/gdggrandrapids'
+    }, {
+      name: 'Meetup',
+      icon: 'images/icons/calendar-check.09b470a8.svg',
+      // icon: 'images/icons/calendar-check.svg',
+      url: 'http://www.meetup.com/GDG-Grand-Rapids/'
+    }];
   })
   .config(function($routeProvider, $mdThemingProvider) {
     $mdThemingProvider.definePalette('gdgPalette', {
@@ -70,9 +71,9 @@ angular.module('gdgWebappApp', [
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
       .when('/events', {
         templateUrl: 'views/events.html',
@@ -98,3 +99,20 @@ angular.module('gdgWebappApp', [
         redirectTo: '/'
       });
   });
+
+app.directive('scroll', function($window) {
+  return function($scope) {
+    angular.element($window).bind('scroll', function() {
+      if (this.pageYOffset >= 1) {
+        $scope.menuScroll = true;
+      } else {
+        if ($scope.home === false) {
+          $scope.menuScroll = true;
+        } else {
+          $scope.menuScroll = false;
+        }
+      }
+      $scope.$apply();
+    });
+  };
+});

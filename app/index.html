@@ -12,9 +12,11 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand'>
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/sponsors.css">
+  <link rel="stylesheet" href="styles/home.css">
   <link rel="stylesheet" href="styles/events.css">
+  <link rel="stylesheet" href="styles/sponsors.css">
   <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/media.css" media="screen and (min-width: 400px) and (max-width: 700px)">
   <!-- endbuild -->
 </head>
@@ -25,72 +27,54 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="header">
-    <md-toolbar>
-      <div id="header-gdg-logo">
-        <img ng-src="images/banner/gdg-logo.png" alt="Background">
-      </div>
-      <div id="toolbar" class="md-toolbar-tools">
-        <span flex></span>
-        <md-button class="menu-items" md-no-ink ng-click="go('/'); gotoLocation()">Home</md-button>
-        <md-button class="menu-items" md-no-ink ng-click="go('/events'); gotoLocation()">Events</md-button>
-        <md-button class="menu-items" md-no-ink ng-click="go('/sponsors'); gotoLocation()">Sponsors</md-button>
-        <md-button class="menu-items" md-no-ink ng-click="go('/about'); gotoLocation()">About</md-button>
-        <md-button class="menu-items" md-no-ink ng-click="go('/contact'); gotoLocation()">Contact</md-button>
-        <div id="paypal-button">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
-            <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-          <md-tooltip md-direction="bottom">
-            Donate Now
-          </md-tooltip>
+  <div class="header" scroll ng-class="{min:menuScroll}">
+    <div class="toolbar-container">
+      <md-toolbar>
+        <div id="header-gdg-logo">
+          <!-- <img ng-src="images/banner/gdg-logo.png" alt="Background"> -->
+          <img ng-src="images/banner/gdg-logo.731f0442.png" alt="Background">
         </div>
-        <md-button class="md-icon-button md-toolbar-tools-collapse" aria-label="More">
-          <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <!-- <div class="fabSpeedDial">
-      <md-fab-speed-dial ng-hide="app.hidden" md-direction="down" md-open="app.isOpen" class="md-scale" ng-class="{ 'md-hover-full': app.hover }" ng-mouseenter="app.isOpen=true" ng-mouseleave="app.isOpen=false">
-        <md-fab-trigger>
-          <md-button aria-label="menu" id="menu-button" class="md-fab md-warn">
-            <md-icon md-svg-src="images/icons/menu.svg" id="menu-button-icon" aria-label="menu"></md-icon>
-            <md-tooltip md-direction="left">
-              Social Media
+        <div id="toolbar" class="md-toolbar-tools">
+          <span flex></span>
+          <md-button class="menu-items" md-no-ink ng-click="go('/'); scrollToTop('home'); home = true">Home</md-button>
+          <md-button class="menu-items" md-no-ink ng-click="go('/events'); scrollToTop(); home = false">Events</md-button>
+          <md-button class="menu-items" md-no-ink ng-click="go('/sponsors'); scrollToTop(); home = false">Sponsors</md-button>
+          <md-button class="menu-items" md-no-ink ng-click="go('/about'); scrollToTop(); home = false">About</md-button>
+          <md-button class="menu-items" md-no-ink ng-click="go('/contact'); scrollToTop(); home = false">Contact</md-button>
+          <div id="paypal-button">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
+              <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            <md-tooltip md-direction="bottom">
+              Donate Now
             </md-tooltip>
-          </md-button>
-        </md-fab-trigger>
-        <md-fab-actions>
-          <div ng-repeat="item in app.items">
-            <md-button aria-label="{{item.name}}" class="md-fab md-mini" ng-href="{{item.url}}" target="_blank">
-              <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
-              <md-tooltip md-direction="left">
-                {{item.name}}
-              </md-tooltip>
-            </md-button>
           </div>
-        </md-fab-actions>
-      </md-fab-speed-dial>
-    </div> -->
+          <md-button class="md-icon-button md-toolbar-tools-collapse" aria-label="More">
+            <!-- <md-icon md-svg-icon="images/icons/menu.svg"></md-icon> -->
+            <md-icon md-svg-icon="images/icons/menu.6f614ff8.svg"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+    </div>
   </div>
 
   <div id="content" ng-view=""></div>
 
   <div class="footer" layout="column" layout-align="center center">
-    <div layout="row" id="social-media-buttons">
+    <div layout="row" id="social-media-buttons-container">
       <div ng-repeat="item in app.items">
-        <md-button aria-label="{{item.name}}" class="md-primary md-hue-1" ng-href="{{item.url}}" target="_blank">
-          <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+        <md-button id="social-media-button" aria-label="{{item.name}}" class="md-primary md-hue-1 md-icon-button" ng-href="{{item.url}}" target="_blank">
+          <md-icon id="social-media-button-icon" md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
           <md-tooltip md-direction="top">
             {{item.name}}
           </md-tooltip>
         </md-button>
       </div>
     </div>
-    <div>Follow Us</div>
+    <div id="follow">Follow Us</div>
   </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -121,11 +105,11 @@
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/home.js"></script>
   <script src="scripts/controllers/events.js"></script>
+  <script src="scripts/controllers/sponsors.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/contact.js"></script>
-  <script src="scripts/controllers/sponsors.js"></script>
   <!-- endbuild -->
 </body>
 
