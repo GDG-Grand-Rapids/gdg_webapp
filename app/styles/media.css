@@ -1,36 +1,38 @@
-.md-toolbar-tools-collapse {
-  display: block;
-}
-.menu-items {
-  display: none;
-}
-#paypal-button {
-  display: none;
-}
-#header-gdg-logo img {
-  height: 60px;
-  width: auto;
-}
-#countdown-clock-container {
-  font-size: 40px;
-}
-#social-media-buttons-container {
-  border-bottom: none;
-}
-#social-media-button {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-#follow {
-  display: none;
-}
-.footer {
-  height: 100px;
-}
-.footer div {
-  margin: 0px;
-}
-#toolbar {
-  top: 0px;
-  position: absolute;
+@media (min-width: 400px) and (max-width: 700px) {
+  .md-toolbar-tools-collapse {
+    display: block;
+  }
+  .menu-items {
+    display: none;
+  }
+  #paypal-button {
+    display: none;
+  }
+  #header-gdg-logo img {
+    height: 60px;
+    width: auto;
+  }
+  #countdown-clock-container {
+    font-size: 40px;
+  }
+  #social-media-buttons-container {
+    border-bottom: none;
+  }
+  #social-media-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #follow {
+    display: none;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer div {
+    margin: 0px;
+  }
+  #toolbar {
+    top: 0px;
+    position: absolute;
+  }
 }
