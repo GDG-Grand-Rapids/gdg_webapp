@@ -4,7 +4,28 @@ var app = angular.module('gdgWebappApp', [
     'ngMaterial',
     'ngRoute'
   ])
-  .controller('AppCtrl', function($scope, $location, $window) {
+  .controller('AppCtrl', function($scope, $location, $window, $timeout, $mdSidenav, $log) {
+    $scope.toggleRight = buildToggler('right');
+    $scope.isOpenRight = function(){
+      return $mdSidenav('right').isOpen();
+    };
+    function buildToggler(navID) {
+      return function() {
+        $mdSidenav(navID)
+          .toggle()
+          .then(function () {
+            $log.debug("toggle " + navID + " is done");
+          });
+      }
+    }
+
+    $scope.close = function () {
+      $mdSidenav('right').close()
+        .then(function () {
+          $log.debug("close RIGHT is done");
+        });
+    };
+
     $scope.go = function(url) {
       $location.path(url);
     };

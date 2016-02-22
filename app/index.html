@@ -52,7 +52,7 @@
               Donate Now
             </md-tooltip>
           </div>
-          <md-button class="md-icon-button md-toolbar-tools-collapse" aria-label="More">
+          <md-button class="md-icon-button md-toolbar-tools-collapse" ng-click="toggleRight()" ng-hide="isOpenRight()" aria-label="More">
             <!-- <md-icon md-svg-icon="images/icons/menu.svg"></md-icon> -->
             <md-icon md-svg-icon="images/icons/menu.6f614ff8.svg"></md-icon>
           </md-button>
@@ -60,6 +60,27 @@
       </md-toolbar>
     </div>
   </div>
+
+  <md-sidenav class="md-sidenav-right md-whiteframe-z2 md-toolbar-tools-collapse" md-component-id="right">
+    <md-content layout-padding layout="column">
+      <md-button id="side-nav-button" md-no-ink ng-click="go('/'); scrollToTop('home'); close(); home = true">Home</md-button>
+      <md-button id="side-nav-button" md-no-ink ng-click="go('/events'); scrollToTop(); close(); home = false">Events</md-button>
+      <md-button id="side-nav-button" md-no-ink ng-click="go('/sponsors'); scrollToTop(); close(); home = false">Sponsors</md-button>
+      <md-button id="side-nav-button" md-no-ink ng-click="go('/about'); scrollToTop(); close(); home = false">About</md-button>
+      <md-button id="side-nav-button" md-no-ink ng-click="go('/contact'); scrollToTop(); close(); home = false">Contact</md-button>
+      <div id="paypal-button">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="B2HH45HNJZ5NW">
+          <input type="image" id="paypal-button-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <md-tooltip md-direction="bottom">
+          Donate Now
+        </md-tooltip>
+      </div>
+    </md-content>
+  </md-sidenav>
 
   <div id="content" ng-view=""></div>
 

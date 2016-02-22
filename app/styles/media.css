@@ -22,6 +22,13 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+  .md-sidenav-right {
+    width: 200px;
+  }
+  #side-nav-button {
+    color: #006064;
+    text-align: left;
+  }
   #follow {
     display: none;
   }
