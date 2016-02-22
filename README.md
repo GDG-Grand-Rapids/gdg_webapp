@@ -27,6 +27,8 @@ Running `grunt test` will run the unit tests with karma.
 * Add <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"> to index.html
 OR
 * Add this to bower.json:
+
+<code>
 "overrides": {
   "bootstrap": {
     "main": [
@@ -36,20 +38,20 @@ OR
     ]
   }
 }
+</code>
+
 * bower install angular-material (https://github.com/angular/material - include cdn css link)
-
-## Dependencies
-
-* npm
-    * grunt
-        * grunt-karma
-            * karma
-            * phantomjs
-            * jasmine-core
-    * bower
 
 ## Deploying
 
+`docker-machine start`
+
+`eval "$(docker-machine env default)"`
+
 `docker build -t <image>:latest .`
+
+`docker run --name website -p 9000:80 -d jwill824/gdg_website:latest`
+
+Go here after you run the latest command `http://192.168.99.100:9000`
 
 `docker push <image>:latest`
