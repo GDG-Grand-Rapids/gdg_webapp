@@ -1,45 +1,90 @@
 @media (min-width: 300px) and (max-width: 700px) {
-  .md-toolbar-tools-collapse {
-    display: block;
-  }
-  .menu-items {
-    display: none;
-  }
-  #paypal-button {
-    display: none;
-  }
-  #header-gdg-logo img {
-    height: 60px;
-    width: auto;
-  }
   #countdown-clock-container {
     font-size: 40px;
-  }
-  #social-media-buttons-container {
-    border-bottom: none;
-  }
-  #social-media-button {
-    margin-left: 10px;
-    margin-right: 10px;
   }
   .md-sidenav-right {
     width: 200px;
   }
-  #side-nav-button {
+  .gdg-Toolbar-image {
+    height: 60px;
+    width: auto;
+  }
+  /*.gdg-Toolbar-menu--large {
+    display: block;
+  }*/
+  .gdg-Toolbar-button {
+    display: none;
+  }
+  .gdg-SideNav-menuItem {
     color: #455A64;
     text-align: left;
   }
-  #follow {
+  /*.gdg-PaypalButton {
+    display: none;
+  }*/
+  .gdg-Footer-text {
     display: none;
   }
-  .footer {
+  .gdg-Footer--small {
     height: 100px;
   }
-  .footer div {
+  .gdg-SocialMediaButtons {
+    margin: 0px;
+    border-bottom: none;
+  }
+  .gdg-SocialMediaButton {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .gdg-Header-content {
+    top: 10%;
+  }
+  .gdg-Header-text {
+    font-size: 50px;
+  }
+  .gdg-Content-buttonWrapper {
+    margin: auto;
+    width: 200px;
+  }
+  .gdg-Content-button {
+    margin-top: 0px;
+    color: #fff;
+    width: inherit;
+  }
+  .gdg-Content-info {
+    margin-top: 30px;
+    height: auto;
+  }
+  .gdg-Content-textHeader {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+  }
+  .gdg-Content-textParagraph {
+    text-align: justify;
+    height: 100px;
+    font-size: 15px;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .gdg-Footer {
+    margin: 15px;
+    height: 100px;
+    background-color: #455A64;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #fff;
+  }
+  .gdg-Footer-text {
     margin: 0px;
   }
-  #toolbar {
-    top: 0px;
-    position: absolute;
+  .gdg-SocialMediaButtons {
+    border-bottom: none;
+    padding: 0px;
+  }
+  .gdg-wrapSocialMediaButton {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
