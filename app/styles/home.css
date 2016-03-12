@@ -1,6 +1,6 @@
 #intro-container, #event-container, #sponsors-container {
   text-align: center;
-  color: #006064;
+  color: #455A64;
 }
 #intro-container #title, #event-container #title, #sponsors-container #title {
   font-family: 'Product Sans', sans-serif;
@@ -19,6 +19,6 @@ hr {
   margin-top: 100px;
   margin-left: 50px;
   margin-right: 50px;
-  color: #006064;
+  color: #455A64;
   opacity: .3;
 }

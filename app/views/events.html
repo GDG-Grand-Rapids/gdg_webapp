@@ -1,47 +1,40 @@
 <div ng-controller="EventsCtrl as events" layout="column">
-  <div id="event-container">
-    <p id="title">Events</p>
+  <div id="countdown-clock-container">
+    <div id="countdown-clock" layout-align="center">
+      <div>
+        <span class="days"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <span class="hours"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
   </div>
-  <div id="countdown-clock-container" layout-align="center">
-    <div>
-      <span class="days"></span>
-      <div class="smalltext">Days</div>
+  <!-- <div id="google-io-widget-container">
+    <iframe id="google-io-widget" layout-align="center center" src="https://events.google.com/io2016/embed" frameborder="0" allowfullscreen></iframe>
+  </div> -->
+  <div id="map-container" layout="row" layout-xs="column">
+    <div id="map-text" flex>
+      <h1>Venue Info</h1>
     </div>
-    <div>
-      <span class="hours"></span>
-      <div class="smalltext">Hours</div>
-    </div>
-    <div>
-      <span class="minutes"></span>
-      <div class="smalltext">Minutes</div>
-    </div>
-    <div>
-      <span class="seconds"></span>
-      <div class="smalltext">Seconds</div>
-    </div>
-  </div>
-  <div id="map-container">
     <md-button id="map-directions-button" class="md-fab md-primary" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
       target="_blank" aria-label="Directions">
-      <!-- <md-icon md-svg-src="images/icons/directions.svg"></md-icon> -->
-      <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon>
+      <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+      <!-- <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon> -->
       <md-tooltip md-direction="left">
         Directions
       </md-tooltip>
     </md-button>
-    <div id="map-text">
-      <p>
-        <div id="map-text-header">Google I/O Extended GR</div>
-        <br/>
-        <div class="map-text-body" id="event-date-text">
-          May 18th
-        </div>
-        <br/>
-        <br/>
-        <div class="map-text-body" id="event-location-text">Eberhard Center GVSU</div>
-      </p>
-    </div>
-    <div id="map"></div>
+    <div id="map" flex></div>
   </div>
 </div>
 
@@ -49,7 +42,7 @@
   function initMap() {
     var styles = [{
       stylers: [{
-        hue: "#006064"
+        hue: "#455A64"
       }, {
         saturation: -75
       }]
@@ -58,8 +51,8 @@
       name: "Styled Map"
     });
     var myLatLng = {
-      lat: 42.964411,
-      lng: -85.677043
+      lat: 42.960324,
+      lng: -85.667779
     };
     var mapOptions = {
       zoom: 15,
@@ -77,7 +70,7 @@
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
       }
     };
-    var mapText = document.getElementById('map-text');
+    // var mapText = document.getElementById('map-text');
     var map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
     var marker = new google.maps.Marker({
@@ -87,7 +80,7 @@
     });
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
+    // map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
   }
 </script>
 

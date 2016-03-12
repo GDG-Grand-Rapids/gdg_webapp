@@ -7,6 +7,13 @@
   font-weight: bold;
   color: #fff;
 }
+#header-menu-dynamic-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 100px;
+  padding-top: 10px;
+  color: #fff;
+  text-align: center;
+}
 #header-gdg-logo img {
   display: block;
   width: 100%;
@@ -24,9 +31,7 @@
 .footer {
   margin: 15px;
   height: 200px;
-  background-color: #006064;
-}
-.footer {
+  background-color: #455A64;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   color: #fff;
