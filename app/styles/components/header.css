@@ -1,0 +1,31 @@
+.gdg-Header {
+  height: 100%;
+  width: 100%;
+}
+.gdg-Header-content {
+  top: 20%;
+  position: absolute;
+  width: 100%;
+}
+.gdg-Header-text {
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  text-align: center;
+}
+.gdg-Header-verticalLine {
+  height: auto;
+  width: 2px;
+  background: #fff;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.gdg-Header-imageContainer {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+}
+.gdg-Header-imageFilter {
+  background: #455A64;
+  opacity: .7;
+}

@@ -1,132 +1,9 @@
-/* CSS SUIT Naming Convention */
+@import url("components/header.css");
+@import url("components/content.css");
+@import url("components/footer.css");
+@import url("components/toolbar.css");
+@import url("components/countdownclock.css");
 
-.gdg-Header {
-  height: 100%;
-  width: 100%;
-}
-.gdg-Header-content {
-  top: 20%;
-  z-index: 1;
-  position: absolute;
-}
-.gdg-Header-text {
-  color: #fff;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 100px;
-  text-align: center;
-}
-.gdg-Header-imageContainer {
-  z-index: 0;
-  position: absolute;
-  top: 0;
-}
-.gdg-Header-imageFilter {
-  background: #455A64;
-  opacity: .7;
-}
-.gdg-Toolbar {
-  z-index: 1;
-  width: 100%;
-  /*position: fixed;*/
-}
-.gdg-Toolbar-menu--large {
-  display: none;
-}
-.gdg-Toolbar-image {
-  display: block;
-  width: auto;
-  height: 60px;
-  position: absolute;
-}
-.gdg-Toolbar-button {
-  color: #000;
-  text-transform: capitalize;
-}
-.gdg-Content-buttonWrapper {
-  margin: auto;
-  width: 200px;
-}
-.gdg-Content-button {
-  margin-top: 50px;
-  color: #fff;
-  width: inherit;
-}
-.gdg-Content-info {
-  margin-top: 50px;
-  height: 100px;
-}
-.gdg-Content-textHeader {
-  text-align: center;
-  font-size: 30px;
-  color: #fff;
-}
-.gdg-Content-textParagraph {
-  text-align: justify;
-  height: 100px;
-  font-size: 20px;
-  color: #fff;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-.gdg-CountDownClock {
-  z-index: 1;
-  font-family: Roboto, sans-serif;
-  font-size: 70px;
-  margin: 40px;
-  color: #455A64;
-}
-.gdg-CountDownClock-clock {
-  font-family: sans-serif;
-  color: #455A64;
-  font-weight: 100;
-  text-align: center;
-  font-size: 200px;
-  margin: 50px;
-}
-.gdg-CountDownClock-clock > div {
-  padding: 10px;
-  border-radius: 3px;
-  background: #fff;
-  display: inline-block;
-}
-.gdg-CountDownClock-clock div > span {
-  padding: 15px;
-  border-radius: 3px;
-  background: #fff;
-  display: inline-block;
-}
-.gdg-CountDownClock-text--small {
-  padding-top: 5px;
-  font-size: 16px;
-}
-.gdg-PaypalButton {
-  position: relative;
-  height: 25px;
-  width: 100px;
-}
-.gdg-PaypalButton-image {
-  height: 100%;
-  width: 100%;
-}
-.gdg-Footer {
-  margin: 15px;
-  height: 200px;
-  background-color: #455A64;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  color: #fff;
-}
-.gdg-Footer-text {
-  margin: 20px;
-}
-.gdg-SocialMediaButtons {
-  border-bottom: solid;
-  padding: 10px;
-}
-.gdg-wrapSocialMediaButton {
-  margin-left: 30px;
-  margin-right: 30px;
-}
 /*#sponsors-list {
   height: 100%;
   width: 100%;
@@ -155,6 +32,7 @@
   height: 100px;
   width: 100px;
 }*/
+
 
 /*#map-container {
   width: 100%;

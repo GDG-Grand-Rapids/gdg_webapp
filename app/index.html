@@ -10,6 +10,8 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,400'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Product+Sans'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Amatic+SC'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Coming+Soon'>
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/media.css">
@@ -22,93 +24,75 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
+  <div class="gdg-Toolbar">
+    <div>
+      <div>
+        <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo">
+        <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo"> -->
+      </div>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="go('/'); scrollToTop();">Home</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Events'); go('/events'); scrollToTop();">Events</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Sponsors'); go('/sponsors'); scrollToTop();">Sponsors</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('About'); go('/about'); scrollToTop();">About</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Contact'); go('/contact'); scrollToTop();">Contact</md-button>
+        <div class="gdg-PaypalButton">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="58VZ3G8JDUDYN">
+            <input type="image" class="gdg-PaypalButton-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          <md-tooltip md-direction="bottom">
+            Donate Now
+          </md-tooltip>
+        </div>
+        <md-button class="md-icon-button gdg-Toolbar-menu--large" ng-click="toggleRight()" ng-hide="isOpenRight()" aria-label="More">
+          <!-- <md-icon md-svg-icon="images/icons/menu.svg"></md-icon> -->
+          <md-icon md-svg-icon="images/icons/menu.6f614ff8.svg"></md-icon>
+        </md-button>
+      </div>
+    </div>
+  </div>
+
   <div class="gdg-Header gdg-Header--large gdg-Header--small">
     <div class="gdg-Header gdg-Header-imageContainer">
       <div class="gdg-Header gdg-Header-imageContainer gdg-Header-imageFilter"></div>
       <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
+      <!-- <img class="gdg-Header" ng-src="images/banner/harris.jpg" alt="Background"> -->
     </div>
     <div class="gdg-Header-content">
       <div class="gdg-Header-text">
-        Google I/O Extended Coming Soon
+        Google I/O Extended
       </div>
-      <div layout="row" layout-xs="column">
-        <div class="gdg-Content-info" flex>
-          <div class="gdg-Content-textHeader">Sponsors</div>
-          <p class="gdg-Content-textParagraph">Our sponsors are what allows us to bring great content to you. We couldn't do it without them! If you're interested in becoming a sponsor, download our sponsorship packet today!</p>
-          <div class="gdg-Content-buttonWrapper" layout-align="center">
-            <md-button target="_blank" class="gdg-Content-button md-raised md-primary" href="/images/documents/sponsorship_prospectus.pdf">Download</md-button>
+      <div class="gdg-CountDownClock">
+        <div class="gdg-CountDownClock-clock" id="clock" layout="row" layout-align="center">
+          <div class="gdg-CountDownClock-time" flex>
+            <span class="days"></span>
+            <div class="gdg-CountDownClock-text">Days</div>
+          </div>
+          <div class="gdg-Header-verticalLine"></div>
+          <div class="gdg-CountDownClock-time" flex>
+            <span class="hours"></span>
+            <div class="gdg-CountDownClock-text">Hours</div>
+          </div>
+          <div class="gdg-Header-verticalLine"></div>
+          <div class="gdg-CountDownClock-time" flex>
+            <span class="minutes"></span>
+            <div class="gdg-CountDownClock-text">Minutes</div>
+          </div>
+          <div class="gdg-Header-verticalLine"></div>
+          <div class="gdg-CountDownClock-time" flex>
+            <span class="seconds"></span>
+            <div class="gdg-CountDownClock-text">Seconds</div>
           </div>
         </div>
-        <div class="gdg-Content-info" flex>
-          <div class="gdg-Content-textHeader">Speakers</div>
-          <p class="gdg-Content-textParagraph">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</p>
-          <div class="gdg-Content-buttonWrapper" layout-align="center">
-            <md-button target="_blank" class="gdg-Content-button md-raised md-primary" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
-          </div>
-        </div>
-        <!-- <div class="gdg-Content-info" flex>
-          <div class="gdg-Content-textHeader">Register</div>
-          <p class="gdg-Content-textParagraph">Google I/O is approaching! And our extended event is approaching with it. Purchase a ticket below.</p>
-          <div class="gdg-Content-buttonWrapper" layout-align="center">
-            <md-button target="_blank" class="gdg-Content-button md-raised md-primary" href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2016-registration-21971803255">Register Now</md-button>
-          </div>
-        </div> -->
       </div>
     </div>
-    <div class="gdg-Toolbar">
-      <md-toolbar>
-        <div>
-          <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo"> -->
-          <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo">
-        </div>
-        <div class="md-toolbar-tools">
-          <span flex></span>
-          <!-- <md-button class="gdg-Toolbar-button" md-no-ink ng-click="go('/'); scrollToTop();">Home</md-button>
-          <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Events'); go('/events'); scrollToTop();">Events</md-button>
-          <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Sponsors'); go('/sponsors'); scrollToTop();">Sponsors</md-button>
-          <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('About'); go('/about'); scrollToTop();">About</md-button>
-          <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Contact'); go('/contact'); scrollToTop();">Contact</md-button> -->
-          <div class="gdg-PaypalButton">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="58VZ3G8JDUDYN">
-              <input type="image" class="gdg-PaypalButton-image" src="http://www.codematrics.com/wp-content/uploads/2015/07/paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <md-tooltip md-direction="bottom">
-              Donate Now
-            </md-tooltip>
-          </div>
-          <!-- <md-button class="md-icon-button gdg-Toolbar-menu--large" ng-click="toggleRight()" ng-hide="isOpenRight()" aria-label="More">
-            <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
-            <md-icon md-svg-icon="images/icons/menu.6f614ff8.svg"></md-icon>
-          </md-button> -->
-        </div>
-      </md-toolbar>
-    </div>
-    <!-- <div class="gdg-CountDownClock">
-      <div class="gdg-CountDownClock-clock">
-        <div>
-          <span class="days"></span>
-          <div class="gdg-CountDownClock-text--small">Days</div>
-        </div>
-        <div>
-          <span class="hours"></span>
-          <div class="gdg-CountDownClock-text--small">Hours</div>
-        </div>
-        <div>
-          <span class="minutes"></span>
-          <div class="gdg-CountDownClock-text--small">Minutes</div>
-        </div>
-        <div>
-          <span class="seconds"></span>
-          <div class="gdg-CountDownClock-text--small">Seconds</div>
-        </div>
-      </div>
-    </div> -->
   </div>
 
-  <!-- <md-sidenav class="gdg-SideNav md-sidenav-right md-whiteframe-z2 md-toolbar-tools-collapse" md-component-id="right">
+  <md-sidenav class="gdg-SideNav md-sidenav-right md-whiteframe-z2 md-toolbar-tools-collapse" md-component-id="right">
     <md-content layout-padding layout="column">
       <md-button class="gdg-SideNav-menuItem" md-no-ink ng-click="go('/'); scrollToTop(); close();">Home</md-button>
       <md-button class="gdg-SideNav-menuItem" md-no-ink ng-click="go('/events'); scrollToTop(); close();">Events</md-button>
@@ -127,9 +111,32 @@
         </md-tooltip>
       </div>
     </md-content>
-  </md-sidenav> -->
+  </md-sidenav>
 
-  <div id="content" ng-view="">
+  <div class="gdg-Content" layout="column">
+    <div layout="row" layout-xs="column">
+      <div class="gdg-Content-info" flex>
+        <div class="gdg-Content-textHeader">Speakers</div>
+        <p class="gdg-Content-textParagraph">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</p>
+        <div class="gdg-Content-buttonWrapper">
+          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
+        </div>
+      </div>
+      <div class="gdg-Content-info" flex>
+        <div class="gdg-Content-textHeader">Register</div>
+        <p class="gdg-Content-textParagraph">Google I/O is approaching! And our extended event is approaching with it. Purchase a ticket below.</p>
+        <div class="gdg-Content-buttonWrapper">
+          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2016-registration-21971803255">Register Now</md-button>
+        </div>
+      </div>
+      <div class="gdg-Content-info" flex>
+        <div class="gdg-Content-textHeader">Sponsors</div>
+        <p class="gdg-Content-textParagraph">Our sponsors are what allows us to bring great content to you. We couldn't do it without them! If you're interested in becoming a sponsor, download our sponsorship packet today!</p>
+        <div class="gdg-Content-buttonWrapper">
+          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="/images/documents/sponsorship_prospectus.pdf">Download</md-button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="gdg-Footer gdg-Footer--small" layout="column" layout-align="center center">
@@ -137,6 +144,7 @@
       <div class="gdg-wrapSocialMediaButton">
         <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Twitter" ng-href="https://twitter.com/ioextendedgr" target="_blank">
           <md-icon md-svg-src="images/icons/twitter.a59e6b76.svg" aria-label="Twitter"></md-icon>
+          <!-- <md-icon md-svg-src="images/icons/twitter.svg" aria-label="Twitter"></md-icon> -->
           <md-tooltip md-direction="top">
             Twitter
           </md-tooltip>
@@ -145,6 +153,7 @@
       <div class="gdg-wrapSocialMediaButton">
         <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Google Plus" ng-href="https://plus.google.com/116106643420425488667/about" target="_blank">
           <md-icon md-svg-src="images/icons/google-plus.8f170833.svg" aria-label="Google Plus"></md-icon>
+          <!-- <md-icon md-svg-src="images/icons/google-plus.svg" aria-label="Google Plus"></md-icon> -->
           <md-tooltip md-direction="top">
             Google Plus
           </md-tooltip>
@@ -153,6 +162,7 @@
       <div class="gdg-wrapSocialMediaButton">
         <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Github" ng-href="https://github.com/GDG-Grand-Rapids" target="_blank">
           <md-icon md-svg-src="images/icons/github-circle.231d7cad.svg" aria-label="Github"></md-icon>
+          <!-- <md-icon md-svg-src="images/icons/github-circle.svg" aria-label="Github"></md-icon> -->
           <md-tooltip md-direction="top">
             Github
           </md-tooltip>
@@ -161,6 +171,7 @@
       <div class="gdg-wrapSocialMediaButton">
         <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Facebook" ng-href="https://www.facebook.com/gdggrandrapids" target="_blank">
           <md-icon md-svg-src="images/icons/facebook.c3e23151.svg" aria-label="Facebook"></md-icon>
+          <!-- <md-icon md-svg-src="images/icons/facebook.svg" aria-label="Facebook"></md-icon> -->
           <md-tooltip md-direction="top">
             Facebook
           </md-tooltip>
@@ -169,6 +180,7 @@
       <div class="gdg-wrapSocialMediaButton">
         <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Meetup" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">
           <md-icon md-svg-src="images/icons/calendar-check.09b470a8.svg" aria-label="Meetup"></md-icon>
+          <!-- <md-icon md-svg-src="images/icons/calendar-check.svg" aria-label="Meetup"></md-icon> -->
           <md-tooltip md-direction="top">
             Meetup
           </md-tooltip>

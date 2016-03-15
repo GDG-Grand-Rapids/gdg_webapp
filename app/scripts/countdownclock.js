@@ -46,4 +46,4 @@ function parseDate(input) {
 }
 
 var deadline = new Date(parseDate('2016-05-18') + 15 * 24 * 60 * 60 * 1000);
-initializeClock('gdg-CountDownClock', deadline);
+initializeClock('clock', deadline);

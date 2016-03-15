@@ -4,27 +4,53 @@ angular.module('gdgWebappApp', [
     'ngMaterial',
     'ngRoute'
   ])
-  .controller('AppCtrl', function() {
-    // function buildToggler(navID) {
-    //   return function() {
-    //     $mdSidenav(navID).toggle();
-    //   };
-    // }
-    // $scope.toggleRight = buildToggler('right');
-    // $scope.isOpenRight = function(){
-    //   return $mdSidenav('right').isOpen();
-    // };
-    // $scope.close = function () {
-    //   $mdSidenav('right').close();
-    // };
-    //
-    // $scope.go = function(url) {
-    //   $location.path(url);
-    // };
-    //
-    // $scope.scrollToTop = function() {
-    //   $window.scrollTo(0, 0);
-    // };
+  .controller('AppCtrl', function($scope, $document, $location, $window, $timeout, $mdSidenav) {
+    function buildToggler(navID) {
+      return function() {
+        $mdSidenav(navID).toggle();
+      };
+    }
+    $scope.toggleRight = buildToggler('right');
+    $scope.isOpenRight = function() {
+      return $mdSidenav('right').isOpen();
+    };
+    $scope.close = function() {
+      $mdSidenav('right').close();
+    };
+
+    $scope.go = function(url) {
+      $location.path(url);
+    };
+
+    $scope.scrollToTop = function() {
+      $window.scrollTo(0, 0);
+    };
+
+    angular.element($window).bind('scroll', function() {
+      var header = angular.element(document.querySelector('.gdg-Header'));
+      var toolbar = angular.element(document.querySelector('.gdg-Toolbar'));
+      var scrollTop = toolbar.scrollTop();
+      var offset = toolbar.offset().top;
+      var height = toolbar.outerHeight();
+      var pageHeight = header.prop('offsetHeight');
+      offset = offset + height / 2;
+      var opacity = 0.9 - (scrollTop - offset + pageHeight) / pageHeight;
+
+      toolbar.css({
+        'opacity': opacity
+      });
+
+      if (opacity > '1') {
+        toolbar.css({
+          'opacity': 1
+        });
+      } else if (opacity < '0') {
+        toolbar.css({
+          'opacity': 0
+        });
+      }
+      $scope.$apply();
+    });
   })
   .config(function($routeProvider, $mdThemingProvider) {
     $mdThemingProvider.definePalette('gdgPalette', {
@@ -41,7 +67,8 @@ angular.module('gdgWebappApp', [
       'A100': 'FFFFFF',
       'A200': 'FFFFFF',
       'A400': 'FFFFFF',
-      'A700': 'FFFFFF'
+      'A700': 'FFFFFF',
+      'contrastDefaultColor': 'light'
     });
     $mdThemingProvider.theme('default')
       .primaryPalette('gdgPalette', {
@@ -49,6 +76,12 @@ angular.module('gdgWebappApp', [
         'hue-1': '50',
         'hue-2': '50',
         'hue-3': '50'
+      })
+      .accentPalette('gdgPalette', {
+        'default': '700',
+        'hue-1': 'A100',
+        'hue-2': 'A100',
+        'hue-3': 'A100'
       });
 
     // $routeProvider

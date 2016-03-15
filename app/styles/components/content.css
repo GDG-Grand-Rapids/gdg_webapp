@@ -1,0 +1,30 @@
+.gdg-Content {
+  height: 100%;
+  width: 100%;
+}
+.gdg-Content-buttonWrapper {
+  margin: auto;
+  width: 200px;
+}
+.gdg-Content-button {
+  color: #fff;
+  width: inherit;
+}
+.gdg-Content-info {
+  margin-top: 50px;
+}
+.gdg-Content-textHeader {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-size: 60px;
+  color: #455A64;
+}
+.gdg-Content-textParagraph {
+  font-family: 'Amatic SC', cursive;
+  text-align: justify;
+  font-size: 40px;
+  height: 300px;
+  color: #455A64;
+  padding-left: 50px;
+  padding-right: 50px;
+}

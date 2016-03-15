@@ -1,17 +1,14 @@
 @media (min-width: 300px) and (max-width: 700px) {
-  /*#countdown-clock-container {
-    font-size: 40px;
-  }
   .md-sidenav-right {
     width: 200px;
-  }*/
+  }
   .gdg-Toolbar-image {
     height: 60px;
     width: auto;
   }
-  /*.gdg-Toolbar-menu--large {
+  .gdg-Toolbar-menu--large {
     display: block;
-  }*/
+  }
   .gdg-Toolbar-button {
     display: none;
   }
@@ -19,9 +16,9 @@
     color: #455A64;
     text-align: left;
   }
-  /*.gdg-PaypalButton {
+  .gdg-PaypalButton {
     display: none;
-  }*/
+  }
   .gdg-Footer-text {
     display: none;
   }
