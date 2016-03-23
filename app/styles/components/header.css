@@ -20,12 +20,11 @@
   margin-left: 30px;
   margin-right: 30px;
 }
-.gdg-Header-imageContainer {
-  z-index: 0;
+.gdg-Header-image {
   position: absolute;
-  top: 0;
 }
 .gdg-Header-imageFilter {
+  position: absolute;
   background: #455A64;
   opacity: .7;
 }
