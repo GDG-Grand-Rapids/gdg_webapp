@@ -113,7 +113,24 @@
     </md-content>
   </md-sidenav> -->
 
-  <div layout="column">
+  <div layout="column" class="gdg-Content">
+    <div class="gdg-Map" layout="row" layout-xs="column">
+      <div class="gdg-Map-text" flex>Event Info
+        <div class="gdg-Map-textParagraph" flex>
+          Join the developer community this year at our 3rd consecutive Google I/O Extended in Grand Rapids! Held at the Harris Building in downtown GR, this event will be more “Googley” than ever. With a day full of live tech presentations, food, networking, games, Google I/O Live Streams, and a special after-party; it will be a day you won’t want to miss.
+Your Attendee registration will grant you a spot at the conference and after party. This will grant you access to all of the event keynotes and sessions, conference t-shirt and swag, refreshments, lunch, and snacks throughout the conference!
+        </div>
+      </div>
+      <md-button class="gdg-Map-button" class="md-fab md-primary" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
+        target="_blank" aria-label="Directions">
+        <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+        <!-- <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon> -->
+        <md-tooltip md-direction="left">
+          Directions
+        </md-tooltip>
+      </md-button>
+      <div id="map" flex></div>
+    </div>
     <div layout="row" layout-xs="column">
       <div class="gdg-Content-info" flex>
         <div class="gdg-Content-textHeader">Speakers</div>
@@ -137,56 +154,31 @@
         </div>
       </div>
     </div>
-    <div class="gdg-Content">
-      <div class="gdg-Content gdg-Content-imageFilter"></div>
-      <!-- <img class="gdg-Content gdg-Content-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
-      <img class="gdg-Content" ng-src="images/banner/harris.jpg" alt="Background">
-      <div id="map-container" layout="row" layout-xs="column">
-        <div id="map-text" flex>
-          <h1>Venue Info</h1>
-        </div>
-        <md-button id="map-directions-button" class="md-fab md-primary" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
-          target="_blank" aria-label="Directions">
-          <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon> -->
-          <md-tooltip md-direction="left">
-            Directions
-          </md-tooltip>
-        </md-button>
-        <div id="map" flex></div>
+    <div class="gdg-Sponsors" id="sponsors-list" layout="column">
+      <div class="sponsors gdg-Sponsors-platinum" layout="row" layout-align="left center" layout-xs="column">
+        <div class="gdg-Sponsors-text">Platinum</div>
+        <img class="gdg-Sponsors-image" ng-click="open('http://bravolt.com/')" ng-src="images/sponsors/bravolt_top.png" alt="BravoLT">
+        <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.png" alt="Spectrum Health">
       </div>
-    </div>
-    <div id="sponsors-list" layout="column">
-      <div class="gdg-Content-textHeader">Platinum</div>
-      <div class="sponsors sponsors-platinum" layout="row" layout-align="center center">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="sponsors gdg-Sponsors-gold" layout="row" layout-align="left center" layout-xs="column">
+        <div class="gdg-Sponsors-text">Gold</div>
+        <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.png" alt="Spindance">
+        <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.png" alt="OST">
+        <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing">
       </div>
-      <hr>
-      <div class="gdg-Content-textHeader">Gold</div>
-      <div class="sponsors sponsors-gold" layout="row" layout-align="center center">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="sponsors gdg-Sponsors-silver" layout="row" layout-align="left center" layout-xs="column">
+        <div class="gdg-Sponsors-text">Silver</div>
+        <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.png" alt="Twistthink">
       </div>
-      <hr>
-      <div class="gdg-Content-textHeader">Silver</div>
-      <div class="sponsors sponsors-silver" layout="row" layout-align="center center">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="sponsors gdg-Sponsors-bronze" layout="row" layout-align="left center" layout-xs="column">
+        <div class="gdg-Sponsors-text">Bronze</div>
+        <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.png" alt="TekSystems">
       </div>
-      <hr>
-      <div class="gdg-Content-textHeader">Bronze</div>
-      <div class="sponsors sponsors-bronze" layout="row" layout-align="center center">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="sponsors gdg-Sponsors-bronze" layout="row" layout-align="left center" layout-xs="column">
+        <div class="gdg-Sponsors-text">Special Partners</div>
+        <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing">
+        <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.png" alt="Propaganda Donuts">
+        <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.png" alt="Lantern Coffee">
       </div>
     </div>
   </div>

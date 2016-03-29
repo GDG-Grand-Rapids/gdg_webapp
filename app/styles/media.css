@@ -52,15 +52,22 @@
     margin-top: 20px;
     height: auto;
   }
+  .gdg-CountDownClock-clock {
+    font-size: 50px;
+  }
+  .gdg-Sponsors-image {
+    width: 50%;
+    height: 50%;
+  }
   .gdg-Content-textHeader {
     text-align: center;
-    font-size: 18px;
-    color: #fff;
+    font-size: 45px;
+    color: #455A64;
   }
   .gdg-Content-textParagraph {
     text-align: justify;
-    height: 80px;
-    font-size: 15px;
+    height: 100%;
+    font-size: 40px;
     padding-left: 50px;
     padding-right: 50px;
   }

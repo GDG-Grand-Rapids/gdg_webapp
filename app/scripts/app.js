@@ -22,6 +22,10 @@ angular.module('gdgWebappApp', [
       $location.path(url);
     };
 
+    $scope.open = function(url) {
+      $window.open(url);
+    }
+
     $scope.scrollToTop = function() {
       $window.scrollTo(0, 0);
     };
