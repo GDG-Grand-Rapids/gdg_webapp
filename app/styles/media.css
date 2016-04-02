@@ -52,8 +52,8 @@
     margin-top: 20px;
     height: auto;
   }
-  .gdg-CountDownClock-clock {
-    font-size: 50px;
+  .gdg-CountDownClock-hide {
+    display: none;
   }
   .gdg-Sponsors-image {
     width: 50%;

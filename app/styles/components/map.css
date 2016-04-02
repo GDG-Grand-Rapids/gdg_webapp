@@ -17,8 +17,8 @@
 }
 .gdg-Map-button {
   position: absolute;
-  margin-top: 400px;
   right: 10px;
+  top: 515px;
 }
 #map {
   height: 100%;
