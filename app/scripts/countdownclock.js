@@ -39,11 +39,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-function parseDate(input) {
-  var parts = input.split('-');
-  // new Date(year, month [, day [, hours[, minutes[, seconds[, ms]]]]])
-  return new Date(parts[0], parts[1] - 1, parts[2]); // Note: months are 0-based
-}
-
-var deadline = new Date(parseDate('2016-05-18') + 15 * 24 * 60 * 60 * 1000);
+var deadline = new Date(2016, 4, 18, 7, 59, 59);
 initializeClock('clock', deadline);

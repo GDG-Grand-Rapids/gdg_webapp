@@ -31,7 +31,7 @@ function initMap() {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     }
   };
-  // var mapText = document.getElementById('map-text');
+  var mapText = document.getElementById('map-text');
   var map = new google.maps.Map(document.getElementById('map'),
     mapOptions);
   var marker = new google.maps.Marker({
@@ -41,5 +41,5 @@ function initMap() {
   });
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
-  // map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(mapText);
 }

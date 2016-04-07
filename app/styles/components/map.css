@@ -3,17 +3,17 @@
   height: 600px;
 }
 .gdg-Map-text {
-  font-family: 'Amatic SC', cursive;
-  font-weight: 100;
-  font-size: 80px;
-  text-align: center;
+  font-family: 'Quicksand';
   background-color: #455A64;
+  margin-top: 20px;
+  padding-left: 10px;
   color: #fff;
 }
-.gdg-Map-textParagraph {
-  padding: 20px;
-  font-size: 35px;
-  font-weight: bold;
+.gdg-Map-textHeader {
+  font-size: 80px;
+}
+.gdg-Map-textBody {
+  font-size: 40px;
 }
 .gdg-Map-button {
   position: absolute;

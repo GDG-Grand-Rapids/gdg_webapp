@@ -1,45 +1,9 @@
 .gdg-Sponsors {
-  
+  margin-bottom: 500px;
 }
 .gdg-Sponsors-image {
   width: 20%;
   height: 20%;
   padding: 30px;
   cursor: pointer;
-}
-.gdg-Sponsors-text {
-  font-family: 'Amatic SC', cursive;
-  font-size: 40px;
-}
-#sponsors-list {
-  height: 100%;
-  width: 100%;
-}
-#sponsors-text {
-  font-style: italic;
-  text-align: left;
-  margin-left: 50px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 30px;
-}
-.gdg-Sponsors-platinum {
-  /*background-color: #e5e4e2;*/
-  /*margin-left: 50px;*/
-}
-.gdg-Sponsors-gold {
-  /*background-color: #CFB53B;*/
-  /*margin-left: 100px;*/
-}
-.gdg-Sponsors-silver {
-  /*background-color: #C0C0C0;*/
-  /*margin-left: 150px;*/
-}
-.gdg-Sponsors-bronze {
-  /*background-color: #8C7853;*/
-  /*margin-left: 200px;*/
-}
-.sponsors div {
-  margin: 40px;
-  height: 100px;
-  width: 100px;
 }

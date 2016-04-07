@@ -76,7 +76,7 @@ angular.module('gdgWebappApp', [
     });
     $mdThemingProvider.theme('default')
       .primaryPalette('gdgPalette', {
-        'default': 'A100',
+        'default': '300',
         'hue-1': '50',
         'hue-2': '50',
         'hue-3': '50'

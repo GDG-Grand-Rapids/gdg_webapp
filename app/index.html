@@ -27,16 +27,16 @@
   <div class="gdg-Toolbar">
     <div>
       <div>
-        <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo">
-        <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo"> -->
+        <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo"> -->
+        <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo">
       </div>
       <div class="md-toolbar-tools">
         <span flex></span>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="go('/'); scrollToTop();">Home</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Events'); go('/events'); scrollToTop();">Events</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Sponsors'); go('/sponsors'); scrollToTop();">Sponsors</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('About'); go('/about'); scrollToTop();">About</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="setPageName('Contact'); go('/contact'); scrollToTop();">Contact</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Home</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Events</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Sponsors</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">About</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-href="mailto:hello@gdggr.org">Contact</md-button>
         <div class="gdg-PaypalButton">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -58,8 +58,8 @@
 
   <div class="gdg-Header gdg-Header--large gdg-Header--small">
     <div class="gdg-Header">
-      <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
-      <!-- <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.jpg" alt="Background"> -->
+      <!-- <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
+      <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.jpg" alt="Background">
       <div class="gdg-Header gdg-Header-imageFilter"></div>
     </div>
     <div class="gdg-Header-content">
@@ -113,133 +113,184 @@
     </md-content>
   </md-sidenav> -->
 
-  <div layout="column" class="gdg-Content">
-    <div>
-
-    </div>
+  <div class="gdg-Content" layout="column">
     <div class="gdg-Map" layout="column" layout-xs="column">
       <md-button class="gdg-Map-button md-fab md-accent" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
         target="_blank" aria-label="Directions">
-        <!-- <md-icon md-svg-src="images/icons/directions.svg"></md-icon> -->
-        <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon>
+        <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+        <!-- <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon> -->
         <md-tooltip md-direction="left">
           Directions
         </md-tooltip>
       </md-button>
+      <div id="map-text">
+        <span class="gdg-Map-text gdg-Map-textHeader">Harris Building</span>
+        <br/>
+        <span class="gdg-Map-text gdg-Map-textBody">May 18th</span>
+        <br/>
+        <span class="gdg-Map-text gdg-Map-textBody">8:00am - 10:00pm</span>
+      </div>
       <div id="map" flex></div>
     </div>
-    <div layout="row" layout-xs="column">
-      <div class="gdg-Content-info" flex>
-        <div class="gdg-Content-textHeader">Speakers</div>
-        <p class="gdg-Content-textParagraph">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</p>
-        <div class="gdg-Content-buttonWrapper">
-          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
-        </div>
+    <div class="gdg-Content-text">
+      Our event is approaching and there's a couple of things you should consider!
+    </div>
+    <div layout="row" layout-xs="column" layout-align="space-around">
+      <div class="gdg-Content-cardWrapper">
+        <md-card class="gdg-Content-card">
+          <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Speakers</span>
+              <span class="md-subhead">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-actions class="gdg-Content-buttonWrapper" layout="row" layout-align="center center">
+            <md-button class="gdg-Content-button md-raised md-accent" target="_blank" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
+          </md-card-actions>
+        </md-card>
       </div>
-      <div class="gdg-Content-info" flex>
-        <div class="gdg-Content-textHeader">Register</div>
-        <p class="gdg-Content-textParagraph">Google I/O is approaching! And our extended event is approaching with it. Purchase a ticket below.</p>
-        <div class="gdg-Content-buttonWrapper">
-          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2016-registration-21971803255">Register Now</md-button>
-        </div>
+      <div class="gdg-Content-cardWrapper">
+        <md-card class="gdg-Content-card">
+          <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Register</span>
+              <span class="md-subhead">Google I/O is approaching! And our extended event is approaching with it. Purchase a ticket below.</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-actions class="gdg-Content-buttonWrapper" layout="row" layout-align="center center">
+            <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2016-registration-21971803255">Register Now</md-button>
+          </md-card-actions>
+        </md-card>
       </div>
-      <div class="gdg-Content-info" flex>
-        <div class="gdg-Content-textHeader">Sponsors</div>
-        <p class="gdg-Content-textParagraph">Our sponsors are what allows us to bring great content to you. We couldn't do it without them! If you're interested in becoming a sponsor, download our sponsorship packet today!</p>
-        <div class="gdg-Content-buttonWrapper">
-          <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="/images/documents/sponsorship_prospectus.pdf">Download</md-button>
-        </div>
+      <div class="gdg-Content-cardWrapper">
+        <md-card class="gdg-Content-card">
+          <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Sponsors</span>
+              <span class="md-subhead">Our sponsors are what allows us to bring great content to you. We couldn't do it without them! If you're interested in becoming a sponsor, download our sponsorship packet today!</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-actions class="gdg-Content-buttonWrapper" layout="row" layout-align="center center">
+            <md-button target="_blank" class="gdg-Content-button md-raised md-accent" href="/images/documents/sponsorship_prospectus.pdf">Download</md-button>
+          </md-card-actions>
+        </md-card>
       </div>
     </div>
-    <div class="gdg-Sponsors" id="sponsors-list" layout="column">
-      <div class="sponsors gdg-Sponsors-platinum" layout="row" layout-align="left center" layout-xs="column">
-        <div class="gdg-Sponsors-text">Platinum</div>
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://bravolt.com/')" ng-src="images/sponsors/bravolt_top.png" alt="BravoLT"> -->
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.png" alt="Spectrum Health"> -->
-        <img class="gdg-Sponsors-image" ng-click="open('http://bravolt.com/')" ng-src="images/sponsors/bravolt_top.30442a34.png" alt="BravoLT">
-        <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.864e0a91.png" alt="Spectrum Health">
-      </div>
-      <div class="sponsors gdg-Sponsors-gold" layout="row" layout-align="left center" layout-xs="column">
-        <div class="gdg-Sponsors-text">Gold</div>
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.png" alt="Spindance"> -->
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.png" alt="OST"> -->
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing"> -->
-        <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.621a09e4.png" alt="Spindance">
-        <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.d1b064cd.png" alt="OST">
-        <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing">
-      </div>
-      <div class="sponsors gdg-Sponsors-silver" layout="row" layout-align="left center" layout-xs="column">
-        <div class="gdg-Sponsors-text">Silver</div>
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.png" alt="Twistthink"> -->
-        <img class="gdg-Sponsors-image" ng-click="open('http://modustri.com/')" ng-src="images/sponsors/modustri.png" alt="Modustri">
-        <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.0969dfd7.png" alt="Twistthink">
-      </div>
-      <div class="sponsors gdg-Sponsors-bronze" layout="row" layout-align="left center" layout-xs="column">
-        <div class="gdg-Sponsors-text">Bronze</div>
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.png" alt="TekSystems"> -->
-        <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.13e86b5a.png" alt="TekSystems">
-      </div>
-      <div class="sponsors gdg-Sponsors-bronze" layout="row" layout-align="left center" layout-xs="column">
-        <div class="gdg-Sponsors-text">Special Partners</div>
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing"> -->
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.png" alt="Propaganda Donuts"> -->
-        <!-- <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.png" alt="Lantern Coffee"> -->
-        <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing">
-        <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.ac52a22b.png" alt="Propaganda Donuts">
-        <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.8a345677.png" alt="Lantern Coffee">
-      </div>
+    <div class="gdg-Sponsors" id="sponsors-list" layout="column" layout-align="center">
+      <md-content>
+        <md-tabs class="md-accent" md-center-tabs="true" md-dynamic-height md-border-bottom>
+          <md-tab label="platinum">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://bravolt.com/')" ng-src="images/sponsors/bravolt_top.png" alt="BravoLT">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.png" alt="Spectrum Health">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.leanlogistics.com/')" ng-src="images/sponsors/leanlogistics.png" alt="Lean Logistics">
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://bravolt.com/')" ng-src="images/sponsors/bravolt_top.30442a34.png" alt="BravoLT"> -->
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.864e0a91.png" alt="Spectrum Health"> -->
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="gold">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.png" alt="Spindance">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.png" alt="OST">
+                <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing">
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.621a09e4.png" alt="Spindance"> -->
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.d1b064cd.png" alt="OST"> -->
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing"> -->
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="silver">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.png" alt="Twistthink">
+                <img class="gdg-Sponsors-image" ng-click="open('http://modustri.com/')" ng-src="images/sponsors/modustri.png" alt="Modustri">
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.0969dfd7.png" alt="Twistthink"> -->
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="bronze">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.png" alt="TekSystems">
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.13e86b5a.png" alt="TekSystems"> -->
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="partners">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.png" alt="New Holland Brewing">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.png" alt="Propaganda Donuts">
+                <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.png" alt="Lantern Coffee">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.silkscreenmarketing.com/')" ng-src="images/sponsors/silkscreen.png" alt="Silkscreen Marketing">
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing"> -->
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.ac52a22b.png" alt="Propaganda Donuts"> -->
+                <!-- <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.8a345677.png" alt="Lantern Coffee"> -->
+              </div>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
     </div>
   </div>
 
-  <div class="gdg-Footer gdg-Footer--small" layout="column" layout-align="center center">
-    <div layout="row" class="gdg-SocialMediaButtons">
-      <div class="gdg-wrapSocialMediaButton">
-        <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Twitter" ng-href="https://twitter.com/ioextendedgr" target="_blank">
-          <md-icon md-svg-src="images/icons/twitter.a59e6b76.svg" aria-label="Twitter"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/twitter.svg" aria-label="Twitter"></md-icon> -->
-          <md-tooltip md-direction="top">
-            Twitter
-          </md-tooltip>
-        </md-button>
+  <div class="gdg-Footer gdg-Footer--small">
+    <div class="gdg-Footer-box" layout="column" layout-align="center center">
+      <div layout="row" class="gdg-SocialMediaButtons">
+        <div class="gdg-wrapSocialMediaButton">
+          <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Twitter" ng-href="https://twitter.com/gdggrandrapids" target="_blank">
+            <!-- <md-icon md-svg-src="images/icons/twitter.a59e6b76.svg" aria-label="Twitter"></md-icon> -->
+            <md-icon md-svg-src="images/icons/twitter.svg" aria-label="Twitter"></md-icon>
+            <md-tooltip md-direction="top">
+              Twitter
+            </md-tooltip>
+          </md-button>
+        </div>
+        <div class="gdg-wrapSocialMediaButton">
+          <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Google Plus" ng-href="https://plus.google.com/116106643420425488667/about" target="_blank">
+            <!-- <md-icon md-svg-src="images/icons/google-plus.8f170833.svg" aria-label="Google Plus"></md-icon> -->
+            <md-icon md-svg-src="images/icons/google-plus.svg" aria-label="Google Plus"></md-icon>
+            <md-tooltip md-direction="top">
+              Google Plus
+            </md-tooltip>
+          </md-button>
+        </div>
+        <div class="gdg-wrapSocialMediaButton">
+          <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Github" ng-href="https://github.com/GDG-Grand-Rapids" target="_blank">
+            <!-- <md-icon md-svg-src="images/icons/github-circle.231d7cad.svg" aria-label="Github"></md-icon> -->
+            <md-icon md-svg-src="images/icons/github-circle.svg" aria-label="Github"></md-icon>
+            <md-tooltip md-direction="top">
+              Github
+            </md-tooltip>
+          </md-button>
+        </div>
+        <div class="gdg-wrapSocialMediaButton">
+          <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Facebook" ng-href="https://www.facebook.com/googledevelopersgrandrapids/" target="_blank">
+            <!-- <md-icon md-svg-src="images/icons/facebook.c3e23151.svg" aria-label="Facebook"></md-icon> -->
+            <md-icon md-svg-src="images/icons/facebook.svg" aria-label="Facebook"></md-icon>
+            <md-tooltip md-direction="top">
+              Facebook
+            </md-tooltip>
+          </md-button>
+        </div>
+        <div class="gdg-wrapSocialMediaButton">
+          <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Meetup" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">
+            <!-- <md-icon md-svg-src="images/icons/calendar-check.09b470a8.svg" aria-label="Meetup"></md-icon> -->
+            <md-icon md-svg-src="images/icons/calendar-check.svg" aria-label="Meetup"></md-icon>
+            <md-tooltip md-direction="top">
+              Meetup
+            </md-tooltip>
+          </md-button>
+        </div>
       </div>
-      <div class="gdg-wrapSocialMediaButton">
-        <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Google Plus" ng-href="https://plus.google.com/116106643420425488667/about" target="_blank">
-          <md-icon md-svg-src="images/icons/google-plus.8f170833.svg" aria-label="Google Plus"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/google-plus.svg" aria-label="Google Plus"></md-icon> -->
-          <md-tooltip md-direction="top">
-            Google Plus
-          </md-tooltip>
-        </md-button>
-      </div>
-      <div class="gdg-wrapSocialMediaButton">
-        <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Github" ng-href="https://github.com/GDG-Grand-Rapids" target="_blank">
-          <md-icon md-svg-src="images/icons/github-circle.231d7cad.svg" aria-label="Github"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/github-circle.svg" aria-label="Github"></md-icon> -->
-          <md-tooltip md-direction="top">
-            Github
-          </md-tooltip>
-        </md-button>
-      </div>
-      <div class="gdg-wrapSocialMediaButton">
-        <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Facebook" ng-href="https://www.facebook.com/gdggrandrapids" target="_blank">
-          <md-icon md-svg-src="images/icons/facebook.c3e23151.svg" aria-label="Facebook"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/facebook.svg" aria-label="Facebook"></md-icon> -->
-          <md-tooltip md-direction="top">
-            Facebook
-          </md-tooltip>
-        </md-button>
-      </div>
-      <div class="gdg-wrapSocialMediaButton">
-        <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Meetup" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">
-          <md-icon md-svg-src="images/icons/calendar-check.09b470a8.svg" aria-label="Meetup"></md-icon>
-          <!-- <md-icon md-svg-src="images/icons/calendar-check.svg" aria-label="Meetup"></md-icon> -->
-          <md-tooltip md-direction="top">
-            Meetup
-          </md-tooltip>
-        </md-button>
-      </div>
+      <div class="gdg-Footer-text">Follow Us</div>
     </div>
-    <div class="gdg-Footer-text">Follow Us</div>
   </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

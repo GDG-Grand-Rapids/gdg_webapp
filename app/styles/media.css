@@ -39,9 +39,16 @@
   .gdg-Header-text {
     font-size: 45px;
   }
-  .gdg-Content-buttonWrapper {
-    margin: auto;
-    width: 200px;
+  .gdg-Content-text {
+    margin: 50px;
+  }
+  .gdg-Content-cardWrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .gdg-Content-card {
+    height: auto;
   }
   .gdg-Content-button {
     margin-top: 0px;
