@@ -34,68 +34,81 @@ angular.module('gdgWebappApp', [
       title: 'Platinum',
       images: [{
         title: 'BravoLT',
-        link: 'http://bravolt.com/',
-        source: 'images/sponsors/bravolt_top.png'
+        link: 'http://www.bravolt.com/',
+        // source: 'images/sponsors/bravolt_top.png'
+        source: 'images/sponsors/bravolt_top.30442a34.png'
       }, {
         title: 'Spectrum Health',
         link: 'http://www.spectrumhealth.org/',
-        source: 'images/sponsors/spectrum.png'
+        // source: 'images/sponsors/spectrum.png'
+        source: 'images/sponsors/spectrum.864e0a91.png'
       }, {
         title: 'Lean Logistics',
         link: 'http://www.leanlogistics.com/',
-        source: 'images/sponsors/leanlogistics.png'
+        // source: 'images/sponsors/leanlogistics.png'
+        source: 'images/sponsors/leanlogistics.dc0a802d.png'
       }]
     }, {
       title: 'Gold',
       images: [{
         title: 'Spindance',
         link: 'https://spindance.com/',
-        source: 'images/sponsors/spindance.png'
+        // source: 'images/sponsors/spindance.png'
+        source: 'images/sponsors/spindance.621a09e4.png'
       }, {
         title: 'OST',
         link: 'http://www.ostusa.com/',
-        source: 'images/sponsors/ost.png'
+        // source: 'images/sponsors/ost.png'
+        source: 'images/sponsors/ost.d1b064cd.png'
       }, {
         title: 'New Holland Brewing',
         link: 'http://newhollandbrew.com/',
-        source: 'images/sponsors/newhollandbrewing.png'
+        // source: 'images/sponsors/newhollandbrewing.png'
+        source: 'images/sponsors/newhollandbrewing.c1e4304c.png'
       }]
     }, {
       title: 'Silver',
       images: [{
         title: 'Twistthink',
         link: 'http://www.twisthink.com/',
-        source: 'images/sponsors/twistthink.png'
+        // source: 'images/sponsors/twistthink.png'
+        source: 'images/sponsors/twistthink.0969dfd7.png'
       }, {
         title: 'Modustri',
         link: 'http://modustri.com/',
-        source: 'images/sponsors/modustri.png'
+        // source: 'images/sponsors/modustri.png'
+        source: 'images/sponsors/modustri.2611d956.png'
       }]
     }, {
       title: 'Bronze',
       images: [{
         title: 'TekSystems',
         link: 'https://www.teksystems.com/en',
-        source: 'images/sponsors/teksystems.png'
+        // source: 'images/sponsors/teksystems.png'
+        source: 'images/sponsors/teksystems.13e86b5a.png'
       }]
     }, {
       title: 'Partners',
       images: [{
         title: 'New Holland Brewing',
         link: 'http://newhollandbrew.com/',
-        source: 'images/sponsors/newhollandbrewing.png'
+        // source: 'images/sponsors/newhollandbrewing.png'
+        source: 'images/sponsors/newhollandbrewing.c1e4304c.png'
       }, {
         title: 'Propaganda Donuts',
         link: 'http://www.propagandadoughnuts.com/',
-        source: 'images/sponsors/propaganda.png'
+        // source: 'images/sponsors/propaganda.png'
+        source: 'images/sponsors/propaganda.ac52a22b.png'
       }, {
         title: 'Lantern Coffee',
         link: 'http://lanterncoffee.com/',
-        source: 'images/sponsors/lantern.png'
+        // source: 'images/sponsors/lantern.png'
+        source: 'images/sponsors/lantern.8a345677.png'
       }, {
         title: 'Silkscreen Marketing',
         link: 'http://www.silkscreenmarketing.com/',
-        source: 'images/sponsors/silkscreen.png'
+        // source: 'images/sponsors/silkscreen.png'
+        source: 'images/sponsors/silkscreen.9c40a3da.png'
       }]
     }];
 
@@ -114,7 +127,7 @@ angular.module('gdgWebappApp', [
       }
     }
 
-    $interval(callAtInterval, 5000);
+    $interval(callAtInterval, 10000);
 
     angular.element($window).bind('scroll', function() {
       var header = angular.element(document.querySelector('.gdg-Header'));
