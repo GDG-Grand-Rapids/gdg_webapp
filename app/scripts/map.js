@@ -3,13 +3,13 @@
 function initMap() {
   var styles = [{
     stylers: [{
-      hue: "#455A64"
+      hue: '#455A64'
     }, {
       saturation: -75
     }]
   }];
   var styledMap = new google.maps.StyledMapType(styles, {
-    name: "Styled Map"
+    name: 'Styled Map'
   });
   var myLatLng = {
     lat: 42.960324,

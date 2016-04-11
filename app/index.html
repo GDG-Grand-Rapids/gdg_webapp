@@ -27,15 +27,15 @@
   <div class="gdg-Toolbar">
     <div>
       <div>
-        <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo">
-        <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo"> -->
+        <!-- <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo"> -->
+        <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.png" alt="Logo">
       </div>
       <div class="md-toolbar-tools">
         <span flex></span>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Home</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Events</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">Sponsors</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop();">About</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop()">Home</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('map')">Events</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('sponsors')">Sponsors</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('about')">About</md-button>
         <md-button class="gdg-Toolbar-button" md-no-ink ng-href="mailto:hello@gdggr.org">Contact</md-button>
         <div class="gdg-PaypalButton">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -58,8 +58,8 @@
 
   <div class="gdg-Header gdg-Header--large gdg-Header--small">
     <div class="gdg-Header">
-      <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
-      <!-- <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.jpg" alt="Background"> -->
+      <!-- <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
+      <img class="gdg-Header gdg-Header-image" ng-src="images/banner/harris.jpg" alt="Background">
       <div class="gdg-Header gdg-Header-imageFilter"></div>
     </div>
     <div class="gdg-Header-content">
@@ -117,8 +117,8 @@
     <div class="gdg-Map" layout="column" layout-xs="column">
       <md-button class="gdg-Map-button md-fab md-accent" ng-href="https://www.google.com/maps/dir//Eberhard+Center+GVSU,+301+Fulton+W,+Grand+Rapids,+MI+49504,+United+States/@42.964411,-85.677043,19z/data=!4m12!1m3!3m2!1s0x0:0x65a65fb96556f343!2sEberhard+Center+GVSU!4m7!1m0!1m5!1m1!1s0x8819addbeaf94245:0x65a65fb96556f343!2m2!1d-85.6769997!2d42.9644113?hl=en-US"
         target="_blank" aria-label="Directions">
-        <!-- <md-icon md-svg-src="images/icons/directions.svg"></md-icon> -->
-        <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon>
+        <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
+        <!-- <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon> -->
         <md-tooltip md-direction="left">
           Directions
         </md-tooltip>
@@ -132,29 +132,32 @@
       </div>
       <div id="map" flex></div>
     </div>
+
     <div class="gdg-Content-text">
       Our event is approaching and there's a couple of things you should consider!
     </div>
-    <div layout="row" layout-xs="column" layout-align="space-around">
+
+    <div class="gdg-Content-cards" layout="row" layout-xs="column" layout-align="space-around">
       <div class="gdg-Content-cardWrapper">
-        <md-card class="gdg-Content-card">
-          <!-- <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background"> -->
-          <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
+        <md-card class="gdg-Content-disableCard">
+          <img class="md-card-image gdg-Content-disableImage" ng-src="images/banner/harris.jpg" alt="Background">
+          <!-- <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">Speakers</span>
-              <span class="md-subhead">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</span>
+              <strike class="md-subhead">We need speakers! If you're interested in a speaking opportunity at our Google I/O Extended event, fill out our form and and we will get back to you.</strike>
+              <span class="md-subhead" color="red">The deadline has approached.</span>
             </md-card-title-text>
           </md-card-title>
           <md-card-actions class="gdg-Content-buttonWrapper" layout="row" layout-align="center center">
-            <md-button class="gdg-Content-button md-raised md-accent" target="_blank" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
+            <md-button ng-disabled="true" class="gdg-Content-button md-raised md-accent" target="_blank" href="https://docs.google.com/forms/d/18gNE26AxJ1VgFJTWyJbCLx-eOAdTYUZT4ar5H9qlqxI/viewform">Sign Up</md-button>
           </md-card-actions>
         </md-card>
       </div>
       <div class="gdg-Content-cardWrapper">
         <md-card class="gdg-Content-card">
-          <!-- <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background"> -->
-          <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
+          <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background">
+          <!-- <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">Register</span>
@@ -168,8 +171,8 @@
       </div>
       <div class="gdg-Content-cardWrapper">
         <md-card class="gdg-Content-card">
-          <!-- <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background"> -->
-          <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background">
+          <img class="md-card-image" ng-src="images/banner/harris.jpg" alt="Background">
+          <!-- <img class="md-card-image" ng-src="images/banner/harris.dacdd16f.jpg" alt="Background"> -->
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">Sponsors</span>
@@ -182,9 +185,87 @@
         </md-card>
       </div>
     </div>
-    <div class="gdg-Sponsors" id="sponsors-list" layout="column" layout-align="center">
+
+    <!-- <div class="gdg-Content-text">
+      Here's a preview for our upcoming speakers at our Google I/O Extended event
+    </div> -->
+
+    <!-- <div class="gdg-Speakers" layout="column" layout-align="center center">
+      <div layout="row" layout-xs="column">
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 1
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 2
+          </div>
+        </div>
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 3
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 4
+          </div>
+        </div>
+      </div>
+      <div layout="row" layout-xs="column">
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 5
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 6
+          </div>
+        </div>
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 7
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 8
+          </div>
+        </div>
+      </div>
+      <div layout="row" layout-xs="column">
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 9
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 10
+          </div>
+        </div>
+        <div layout="row">
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 11
+          </div>
+          <div class="gdg-Speaker-text">
+            <div class="gdg-Speaker"></div>
+            Speaker 12
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="gdg-Content-text" id="sponsors">
+      Here's a list of our sponsors
+    </div>
+
+    <div class="gdg-Sponsors" layout="column">
       <md-content>
-        <md-tabs class="md-accent" md-selected="selectedIndex" md-center-tabs="true" md-dynamic-height md-border-bottom>
+        <md-tabs class="gdg-Sponsors-tabs md-accent" md-selected="selectedIndex" md-center-tabs="true" md-border-bottom>
           <md-tab label="{{tab.title}}" ng-repeat="tab in tabs">
             <md-content class="md-padding">
               <div layout="row" layout-align="center center" layout-xs="column">
@@ -195,6 +276,15 @@
         </md-tabs>
       </md-content>
     </div>
+
+    <!-- <div class="gdg-Content-text">
+      You might want to know about us too!
+    </div>
+
+    <div class="gdg-Organizers" id="about">
+      <img class="gdg-Organizers-portraitImage" ng-src="images/banner/harris.jpg" alt="Background">
+    </div> -->
+
   </div>
 
   <div class="gdg-Footer gdg-Footer--small">
@@ -202,8 +292,8 @@
       <div layout="row" class="gdg-SocialMediaButtons">
         <div class="gdg-wrapSocialMediaButton">
           <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Twitter" ng-href="https://twitter.com/gdggrandrapids" target="_blank">
-            <md-icon md-svg-src="images/icons/twitter.a59e6b76.svg" aria-label="Twitter"></md-icon>
-            <!-- <md-icon md-svg-src="images/icons/twitter.svg" aria-label="Twitter"></md-icon> -->
+            <!-- <md-icon md-svg-src="images/icons/twitter.a59e6b76.svg" aria-label="Twitter"></md-icon> -->
+            <md-icon md-svg-src="images/icons/twitter.svg" aria-label="Twitter"></md-icon>
             <md-tooltip md-direction="top">
               Twitter
             </md-tooltip>
@@ -211,8 +301,8 @@
         </div>
         <div class="gdg-wrapSocialMediaButton">
           <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Google Plus" ng-href="https://plus.google.com/116106643420425488667/about" target="_blank">
-            <md-icon md-svg-src="images/icons/google-plus.8f170833.svg" aria-label="Google Plus"></md-icon>
-            <!-- <md-icon md-svg-src="images/icons/google-plus.svg" aria-label="Google Plus"></md-icon> -->
+            <!-- <md-icon md-svg-src="images/icons/google-plus.8f170833.svg" aria-label="Google Plus"></md-icon> -->
+            <md-icon md-svg-src="images/icons/google-plus.svg" aria-label="Google Plus"></md-icon>
             <md-tooltip md-direction="top">
               Google Plus
             </md-tooltip>
@@ -220,8 +310,8 @@
         </div>
         <div class="gdg-wrapSocialMediaButton">
           <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Github" ng-href="https://github.com/GDG-Grand-Rapids" target="_blank">
-            <md-icon md-svg-src="images/icons/github-circle.231d7cad.svg" aria-label="Github"></md-icon>
-            <!-- <md-icon md-svg-src="images/icons/github-circle.svg" aria-label="Github"></md-icon> -->
+            <!-- <md-icon md-svg-src="images/icons/github-circle.231d7cad.svg" aria-label="Github"></md-icon> -->
+            <md-icon md-svg-src="images/icons/github-circle.svg" aria-label="Github"></md-icon>
             <md-tooltip md-direction="top">
               Github
             </md-tooltip>
@@ -229,8 +319,8 @@
         </div>
         <div class="gdg-wrapSocialMediaButton">
           <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Facebook" ng-href="https://www.facebook.com/googledevelopersgrandrapids/" target="_blank">
-            <md-icon md-svg-src="images/icons/facebook.c3e23151.svg" aria-label="Facebook"></md-icon>
-            <!-- <md-icon md-svg-src="images/icons/facebook.svg" aria-label="Facebook"></md-icon> -->
+            <!-- <md-icon md-svg-src="images/icons/facebook.c3e23151.svg" aria-label="Facebook"></md-icon> -->
+            <md-icon md-svg-src="images/icons/facebook.svg" aria-label="Facebook"></md-icon>
             <md-tooltip md-direction="top">
               Facebook
             </md-tooltip>
@@ -238,8 +328,8 @@
         </div>
         <div class="gdg-wrapSocialMediaButton">
           <md-button class="md-primary md-hue-1 md-icon-button" aria-label="Meetup" ng-href="http://www.meetup.com/GDG-Grand-Rapids/" target="_blank">
-            <md-icon md-svg-src="images/icons/calendar-check.09b470a8.svg" aria-label="Meetup"></md-icon>
-            <!-- <md-icon md-svg-src="images/icons/calendar-check.svg" aria-label="Meetup"></md-icon> -->
+            <!-- <md-icon md-svg-src="images/icons/calendar-check.09b470a8.svg" aria-label="Meetup"></md-icon> -->
+            <md-icon md-svg-src="images/icons/calendar-check.svg" aria-label="Meetup"></md-icon>
             <md-tooltip md-direction="top">
               Meetup
             </md-tooltip>

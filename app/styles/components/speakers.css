@@ -1,0 +1,13 @@
+.gdg-Speakers {
+
+}
+.gdg-Speaker {
+  height: 200px;
+  width: 200px;
+  background-color: #455A64;
+  margin: 30px;
+}
+.gdg-Speaker-text {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}

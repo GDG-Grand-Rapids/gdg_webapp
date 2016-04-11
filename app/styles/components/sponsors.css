@@ -1,9 +1,12 @@
 .gdg-Sponsors {
-  margin-bottom: 500px;
+
+}
+.gdg-Sponsors-tabs {
+  height: 450px;
 }
 .gdg-Sponsors-image {
   width: 20%;
   height: 20%;
-  padding: 30px;
+  margin: 30px;
   cursor: pointer;
 }

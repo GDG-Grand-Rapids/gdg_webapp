@@ -4,7 +4,7 @@ angular.module('gdgWebappApp', [
     'ngMaterial',
     'ngRoute'
   ])
-  .controller('AppCtrl', function($scope, $document, $location, $window, $timeout, $interval, $mdSidenav) {
+  .controller('AppCtrl', function($scope, $document, $location, $window, $timeout, $interval, $mdSidenav, $anchorScroll) {
     function buildToggler(navID) {
       return function() {
         $mdSidenav(navID).toggle();
@@ -31,73 +31,78 @@ angular.module('gdgWebappApp', [
     };
 
     var tabs = [{
-        title: 'Platinum',
-        images: [{
-          title: 'BravoLT',
-          link: 'http://bravolt.com/',
-          source: 'images/sponsors/bravolt_top.png'
-        }, {
-          title: 'Spectrum Health',
-          link: 'http://www.spectrumhealth.org/',
-          source: 'images/sponsors/spectrum.png'
-        }, {
-          title: 'Lean Logistics',
-          link: 'http://www.leanlogistics.com/',
-          source: 'images/sponsors/leanlogistics.png'
-        }]
+      title: 'Platinum',
+      images: [{
+        title: 'BravoLT',
+        link: 'http://bravolt.com/',
+        source: 'images/sponsors/bravolt_top.png'
       }, {
-        title: 'Gold',
-        images: [{
-          title: 'Spindance',
-          link: 'https://spindance.com/',
-          source: 'images/sponsors/spindance.png'
-        }, {
-          title: 'OST',
-          link: 'http://www.ostusa.com/',
-          source: 'images/sponsors/ost.png'
-        }, {
-          title: 'New Holland Brewing',
-          link: 'http://newhollandbrew.com/',
-          source: 'images/sponsors/newhollandbrewing.png'
-        }]
+        title: 'Spectrum Health',
+        link: 'http://www.spectrumhealth.org/',
+        source: 'images/sponsors/spectrum.png'
       }, {
-        title: 'Silver',
-        images: [{
-          title: 'Twistthink',
-          link: 'http://www.twisthink.com/',
-          source: 'images/sponsors/twistthink.png'
-        }, {
-          title: 'Modustri',
-          link: 'http://modustri.com/',
-          source: 'images/sponsors/modustri.png'
-        }]
+        title: 'Lean Logistics',
+        link: 'http://www.leanlogistics.com/',
+        source: 'images/sponsors/leanlogistics.png'
+      }]
+    }, {
+      title: 'Gold',
+      images: [{
+        title: 'Spindance',
+        link: 'https://spindance.com/',
+        source: 'images/sponsors/spindance.png'
       }, {
-        title: 'Bronze',
-        images: [{
-          title: 'TekSystems',
-          link: 'https://www.teksystems.com/en',
-          source: 'images/sponsors/teksystems.png'
-        }]
+        title: 'OST',
+        link: 'http://www.ostusa.com/',
+        source: 'images/sponsors/ost.png'
       }, {
-        title: 'Partners',
-        images: [{
-          title: 'New Holland Brewing',
-          link: 'http://newhollandbrew.com/',
-          source: 'images/sponsors/newhollandbrewing.png'
-        }, {
-          title: 'Propaganda Donuts',
-          link: 'http://www.propagandadoughnuts.com/',
-          source: 'images/sponsors/propaganda.png'
-        }, {
-          title: 'Lantern Coffee',
-          link: 'http://lanterncoffee.com/',
-          source: 'images/sponsors/lantern.png'
-        }, {
-          title: 'Silkscreen Marketing',
-          link: 'http://www.silkscreenmarketing.com/',
-          source: 'images/sponsors/silkscreen.png'
-        }]
-      }];
+        title: 'New Holland Brewing',
+        link: 'http://newhollandbrew.com/',
+        source: 'images/sponsors/newhollandbrewing.png'
+      }]
+    }, {
+      title: 'Silver',
+      images: [{
+        title: 'Twistthink',
+        link: 'http://www.twisthink.com/',
+        source: 'images/sponsors/twistthink.png'
+      }, {
+        title: 'Modustri',
+        link: 'http://modustri.com/',
+        source: 'images/sponsors/modustri.png'
+      }]
+    }, {
+      title: 'Bronze',
+      images: [{
+        title: 'TekSystems',
+        link: 'https://www.teksystems.com/en',
+        source: 'images/sponsors/teksystems.png'
+      }]
+    }, {
+      title: 'Partners',
+      images: [{
+        title: 'New Holland Brewing',
+        link: 'http://newhollandbrew.com/',
+        source: 'images/sponsors/newhollandbrewing.png'
+      }, {
+        title: 'Propaganda Donuts',
+        link: 'http://www.propagandadoughnuts.com/',
+        source: 'images/sponsors/propaganda.png'
+      }, {
+        title: 'Lantern Coffee',
+        link: 'http://lanterncoffee.com/',
+        source: 'images/sponsors/lantern.png'
+      }, {
+        title: 'Silkscreen Marketing',
+        link: 'http://www.silkscreenmarketing.com/',
+        source: 'images/sponsors/silkscreen.png'
+      }]
+    }];
+
+    $scope.gotoElement = function(element) {
+      $location.hash(element);
+      $anchorScroll();
+    };
 
     $scope.tabs = tabs;
 
@@ -109,7 +114,7 @@ angular.module('gdgWebappApp', [
       }
     }
 
-    $interval(callAtInterval, 10000);
+    $interval(callAtInterval, 5000);
 
     angular.element($window).bind('scroll', function() {
       var header = angular.element(document.querySelector('.gdg-Header'));
