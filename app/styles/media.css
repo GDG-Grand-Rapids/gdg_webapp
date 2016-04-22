@@ -79,15 +79,11 @@
     padding-right: 50px;
   }
   .gdg-Footer {
-    margin: 15px;
-    height: 100px;
-    background-color: #455A64;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    color: #fff;
+    bottom: 0;
+    height: 165px;
   }
-  .gdg-Footer-text {
-    margin: 0px;
+  .gdg-Footer-box {
+    height: 150px;
   }
   .gdg-SocialMediaButtons {
     border-bottom: none;
