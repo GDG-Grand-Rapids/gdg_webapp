@@ -5,19 +5,6 @@ angular.module('gdgWebappApp', [
     'ngRoute'
   ])
   .controller('AppCtrl', function($scope, $document, $location, $window, $timeout, $interval, $mdSidenav, $anchorScroll) {
-    function buildToggler(navID) {
-      return function() {
-        $mdSidenav(navID).toggle();
-      };
-    }
-    $scope.toggleRight = buildToggler('right');
-    $scope.isOpenRight = function() {
-      return $mdSidenav('right').isOpen();
-    };
-    $scope.close = function() {
-      $mdSidenav('right').close();
-    };
-
     $scope.go = function(url) {
       $location.path(url);
     };
@@ -186,34 +173,4 @@ angular.module('gdgWebappApp', [
         'hue-2': 'A100',
         'hue-3': 'A100'
       });
-
-    // $routeProvider
-    //   .when('/', {
-    //     templateUrl: 'views/home.html',
-    //     controller: 'HomeCtrl',
-    //     controllerAs: 'home'
-    //   })
-    //   .when('/events', {
-    //     templateUrl: 'views/events.html',
-    //     controller: 'EventsCtrl',
-    //     controllerAs: 'events'
-    //   })
-    //   .when('/sponsors', {
-    //     templateUrl: 'views/sponsors.html',
-    //     controller: 'SponsorCtrl',
-    //     controllerAs: 'sponsors'
-    //   })
-    //   .when('/about', {
-    //     templateUrl: 'views/about.html',
-    //     controller: 'AboutCtrl',
-    //     controllerAs: 'about'
-    //   })
-    //   .when('/contact', {
-    //     templateUrl: 'views/contact.html',
-    //     controller: 'ContactCtrl',
-    //     controllerAs: 'contact'
-    //   })
-    //   .otherwise({
-    //     redirectTo: '/'
-    //   });
   });

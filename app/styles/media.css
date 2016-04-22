@@ -1,6 +1,6 @@
 @media (min-width: 300px) and (max-width: 700px) {
-  .md-sidenav-right {
-    width: 200px;
+  .gdg-Speaker-text {
+    width: 100%;
   }
   .gdg-Toolbar-image {
     height: 60px;
