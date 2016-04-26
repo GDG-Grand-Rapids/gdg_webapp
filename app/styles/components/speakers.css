@@ -1,4 +1,4 @@
-.gdg-Speaker {
+.gdg-Speaker-image {
   height: 300px;
   width: 250px;
   background-color: #455A64;
@@ -7,10 +7,6 @@
   left: 0;
   margin-right: auto;
   margin-left: auto;
-}
-.gdg-Speaker-blank {
-  background-color: #fff;
-  color: #fff;
 }
 .gdg-Speaker-text {
   height: 300px;
