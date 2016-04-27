@@ -1,6 +1,9 @@
 @media (min-width: 300px) and (max-width: 700px) {
-  .gdg-Speaker-text {
+  .gdg-Speaker-imageWrapper {
     width: 100%;
+  }
+  .gdg-Speaker-title {
+    margin-bottom: 20px;
   }
   .gdg-Toolbar-image {
     height: 60px;
