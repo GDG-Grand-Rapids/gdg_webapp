@@ -17,119 +17,15 @@ angular.module('gdgWebappApp', [
       $window.scrollTo(0, 0);
     };
 
-    var tabs = [{
-      title: 'Platinum',
-      images: [{
-        title: 'BravoLT',
-        link: 'http://www.bravolt.com/',
-        // source: 'images/sponsors/bravolt.jpg'
-        source: 'images/sponsors/bravolt.4981d93f.jpg'
-      }, {
-        title: 'Spectrum Health',
-        link: 'http://www.spectrumhealth.org/',
-        // source: 'images/sponsors/spectrum.png'
-        source: 'images/sponsors/spectrum.864e0a91.png'
-      }, {
-        title: 'Lean Logistics',
-        link: 'http://www.leanlogistics.com/',
-        // source: 'images/sponsors/leanlogistics.png'
-        source: 'images/sponsors/leanlogistics.dc0a802d.png'
-      }]
-    }, {
-      title: 'Gold',
-      images: [{
-        title: 'Spindance',
-        link: 'https://spindance.com/',
-        // source: 'images/sponsors/spindance.png'
-        source: 'images/sponsors/spindance.621a09e4.png'
-      }, {
-        title: 'OST',
-        link: 'http://www.ostusa.com/',
-        // source: 'images/sponsors/ost.png'
-        source: 'images/sponsors/ost.d1b064cd.png'
-      }, {
-        title: 'New Holland Brewing',
-        link: 'http://newhollandbrew.com/',
-        // source: 'images/sponsors/newhollandbrewing.png'
-        source: 'images/sponsors/newhollandbrewing.c1e4304c.png'
-      }, {
-        title: 'Start Garden',
-        link: 'http://startgarden.com/',
-        // source: 'images/sponsors/startgarden.png'
-        source: 'images/sponsors/startgarden.657254b2.png'
-      }]
-    }, {
-      title: 'Silver',
-      images: [{
-        title: 'Twistthink',
-        link: 'http://www.twisthink.com/',
-        // source: 'images/sponsors/twistthink.png'
-        source: 'images/sponsors/twistthink.0969dfd7.png'
-      }, {
-        title: 'Modustri',
-        link: 'http://modustri.com/',
-        // source: 'images/sponsors/modustri.png'
-        source: 'images/sponsors/modustri.2611d956.png'
-      }, {
-        title: 'Atomic Object',
-        link: 'https://atomicobject.com/',
-        // source: 'images/sponsors/atomicobject.png'
-        source: 'images/sponsors/atomicobject.5824e583.png'
-      }, {
-        title: 'GFS',
-        link: 'https://www.gfs.com/en',
-        // source: 'images/sponsors/gfs.jpg'
-        source: 'images/sponsors/gfs.aa604cc3.jpg'
-      }]
-    }, {
-      title: 'Bronze',
-      images: [{
-        title: 'TekSystems',
-        link: 'https://www.teksystems.com/en',
-        // source: 'images/sponsors/teksystems.png'
-        source: 'images/sponsors/teksystems.13e86b5a.png'
-      }]
-    }, {
-      title: 'Partners',
-      images: [{
-        title: 'New Holland Brewing',
-        link: 'http://newhollandbrew.com/',
-        // source: 'images/sponsors/newhollandbrewing.png'
-        source: 'images/sponsors/newhollandbrewing.c1e4304c.png'
-      }, {
-        title: 'Propaganda Donuts',
-        link: 'http://www.propagandadoughnuts.com/',
-        // source: 'images/sponsors/propaganda.png'
-        source: 'images/sponsors/propaganda.ac52a22b.png'
-      }, {
-        title: 'Lantern Coffee',
-        link: 'http://lanterncoffee.com/',
-        // source: 'images/sponsors/lantern.png'
-        source: 'images/sponsors/lantern.8a345677.png'
-      }, {
-        title: 'Silkscreen Marketing',
-        link: 'http://www.silkscreenmarketing.com/',
-        // source: 'images/sponsors/silkscreen.png'
-        source: 'images/sponsors/silkscreen.9c40a3da.png'
-      }, {
-        title: 'Extra Life Foundation',
-        link: 'http://www.extra-life.org/',
-        // source: 'images/sponsors/extralife.png'
-        source: 'images/sponsors/extralife.b60d28fe.png'
-      }]
-    }];
-
     $scope.gotoElement = function(element) {
       $location.hash(element);
       $anchorScroll();
     };
 
-    $scope.tabs = tabs;
-
     function callAtInterval() {
       $scope.selectedIndex = $scope.selectedIndex + 1;
 
-      if ($scope.selectedIndex === tabs.length) {
+      if ($scope.selectedIndex === $scope.tabs.length) {
         $scope.selectedIndex = 0;
       }
     }

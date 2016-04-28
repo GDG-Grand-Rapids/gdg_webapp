@@ -290,10 +290,56 @@
     <div class="gdg-Sponsors" layout="column">
       <md-content>
         <md-tabs class="gdg-Sponsors-tabs md-accent" md-selected="selectedIndex" md-center-tabs="true" md-border-bottom>
-          <md-tab label="{{tab.title}}" ng-repeat="tab in tabs">
+          <md-tab label="Platinum">
             <md-content class="md-padding">
               <div layout="row" layout-align="center center" layout-xs="column">
-                <img class="gdg-Sponsors-image" ng-repeat="image in tab.images" ng-click="open(image.link)" ng-src="{{image.source}}" alt="{{image.title}}">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.bravolt.com/')" ng-src="images/sponsors/bravolt.4981d93f.jpg" alt="BravoLT">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.spectrumhealth.org/')" ng-src="images/sponsors/spectrum.864e0a91.png" alt="Spectrum Health">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.leanlogistics.com/')" ng-src="images/sponsors/leanlogistics.dc0a802d.png" alt="Lean Logistics">
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Gold">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('https://spindance.com/')" ng-src="images/sponsors/spindance.621a09e4.png" alt="Spindance">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.ostusa.com/')" ng-src="images/sponsors/ost.d1b064cd.png" alt="OST">
+                <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing">
+              </div>
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://startgarden.com/')" ng-src="images/sponsors/startgarden.657254b2.png" alt="Start Garden">
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Silver">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.twisthink.com/')" ng-src="images/sponsors/twistthink.0969dfd7.png" alt="Twistthink">
+                <img class="gdg-Sponsors-image" ng-click="open('http://modustri.com/')" ng-src="images/sponsors/modustri.2611d956.png" alt="Modustri">
+                <img class="gdg-Sponsors-image" ng-click="open('https://atomicobject.com/')" ng-src="images/sponsors/atomicobject.5824e583.png" alt="Atomic Object">
+              </div>
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('https://www.gfs.com/en')" ng-src="images/sponsors/gfs.aa604cc3.jpg" alt="GFS">
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Bronze">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('https://www.teksystems.com/en')" ng-src="images/sponsors/teksystems.13e86b5a.png" alt="TekSystems">
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Partners">
+            <md-content class="md-padding">
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://newhollandbrew.com/')" ng-src="images/sponsors/newhollandbrewing.c1e4304c.png" alt="New Holland Brewing">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.propagandadoughnuts.com/')" ng-src="images/sponsors/propaganda.ac52a22b.png" alt="Propaganda Donuts">
+                <img class="gdg-Sponsors-image" ng-click="open('http://lanterncoffee.com/')" ng-src="images/sponsors/lantern.8a345677.png" alt="Lantern Coffee">
+              </div>
+              <div layout="row" layout-align="center center" layout-xs="column">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.silkscreenmarketing.com/')" ng-src="images/sponsors/silkscreen.9c40a3da.png" alt="Silkscreen Marketing">
+                <img class="gdg-Sponsors-image" ng-click="open('http://www.extra-life.org/')" ng-src="images/sponsors/extralife.b60d28fe.png" alt="Extra Life Foundation">
               </div>
             </md-content>
           </md-tab>
