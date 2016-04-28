@@ -115,7 +115,7 @@ angular.module('gdgWebappApp', [
         title: 'Extra Life Foundation',
         link: 'http://www.extra-life.org/',
         // source: 'images/sponsors/extralife.png'
-        source: 'images/sponsors/extralife.23425f4c.png'
+        source: 'images/sponsors/extralife.b60d28fe.png'
       }]
     }];
 
