@@ -22,8 +22,8 @@ angular.module('gdgWebappApp', [
       images: [{
         title: 'BravoLT',
         link: 'http://www.bravolt.com/',
-        // source: 'images/sponsors/bravolt_top.png'
-        source: 'images/sponsors/bravolt_top.30442a34.png'
+        // source: 'images/sponsors/bravolt.jpg'
+        source: 'images/sponsors/bravolt.4981d93f.jpg'
       }, {
         title: 'Spectrum Health',
         link: 'http://www.spectrumhealth.org/',
@@ -52,6 +52,11 @@ angular.module('gdgWebappApp', [
         link: 'http://newhollandbrew.com/',
         // source: 'images/sponsors/newhollandbrewing.png'
         source: 'images/sponsors/newhollandbrewing.c1e4304c.png'
+      }, {
+        title: 'Start Garden',
+        link: 'http://startgarden.com/',
+        // source: 'images/sponsors/startgarden.png'
+        source: 'images/sponsors/startgarden.657254b2.png'
       }]
     }, {
       title: 'Silver',
@@ -65,6 +70,16 @@ angular.module('gdgWebappApp', [
         link: 'http://modustri.com/',
         // source: 'images/sponsors/modustri.png'
         source: 'images/sponsors/modustri.2611d956.png'
+      }, {
+        title: 'Atomic Object',
+        link: 'https://atomicobject.com/',
+        // source: 'images/sponsors/atomicobject.png'
+        source: 'images/sponsors/atomicobject.5824e583.png'
+      }, {
+        title: 'GFS',
+        link: 'https://www.gfs.com/en',
+        // source: 'images/sponsors/gfs.jpg'
+        source: 'images/sponsors/gfs.aa604cc3.jpg'
       }]
     }, {
       title: 'Bronze',
@@ -96,6 +111,11 @@ angular.module('gdgWebappApp', [
         link: 'http://www.silkscreenmarketing.com/',
         // source: 'images/sponsors/silkscreen.png'
         source: 'images/sponsors/silkscreen.9c40a3da.png'
+      }, {
+        title: 'Extra Life Foundation',
+        link: 'http://www.extra-life.org/',
+        // source: 'images/sponsors/extralife.png'
+        source: 'images/sponsors/extralife.23425f4c.png'
       }]
     }];
 
