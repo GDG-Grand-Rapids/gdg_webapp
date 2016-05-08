@@ -48,10 +48,10 @@ OR
 
 `eval "$(docker-machine env default)"`
 
-`docker build -t <image>:latest .`
+`docker build -t jwill824/gdg_website:latest .`
 
 `docker run --name website -p 9000:80 -d jwill824/gdg_website:latest`
 
-Go here after you run the latest command `http://192.168.99.100:9000`
+Go here after you run the latest command `http://192.168.99.101:9000`
 
-`docker push <image>:latest`
+`docker push jwill824/gdg_website:latest`
