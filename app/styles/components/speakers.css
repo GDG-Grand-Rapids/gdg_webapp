@@ -1,0 +1,29 @@
+.gdg-Speaker-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin-left: 20px;
+  width: 300px;
+}
+.gdg-Speaker-image {
+  height: 300px;
+  width: 300px;
+  background-color: #455A64;
+  margin-bottom: 30px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gdg-Speaker-imageWrapper {
+  height: 300px;
+  width: 33.4%;
+  margin-bottom: 150px;
+  text-align: center;
+}
+.gdg-Speaker-text {
+  width: 100%;
+}
+.gdg-Speaker-imageRowWrapper {
+  width: 100%;
+  font-size: 14px;
+}

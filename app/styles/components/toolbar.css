@@ -1,0 +1,32 @@
+.gdg-Toolbar {
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+}
+.gdg-Toolbar-menu--large {
+  display: none;
+}
+.gdg-Toolbar-image {
+  display: block;
+  width: auto;
+  height: 60px;
+  position: absolute;
+}
+.gdg-Toolbar-button {
+  color: #455A64;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.gdg-PaypalButton {
+  position: relative;
+  height: 25px;
+  width: 100px;
+}
+.gdg-PaypalButton-image {
+  height: 100%;
+  width: 100%;
+}
