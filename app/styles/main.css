@@ -116,6 +116,9 @@
   margin-bottom: 15px;
   height: 200px;
 }
+.gdg-Footer-icon {
+  fill: #fff;
+}
 .gdg-Footer-text {
   margin: 20px;
 }

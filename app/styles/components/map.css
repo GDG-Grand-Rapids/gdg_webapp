@@ -20,6 +20,9 @@
   right: 10px;
   top: 515px;
 }
+.gdg-Map-buttonImg {
+  padding-top: 15px;
+}
 #map {
   height: 100%;
 }
