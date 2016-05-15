@@ -1,0 +1,25 @@
+.gdg-Map {
+  width: 100%;
+  height: 600px;
+}
+.gdg-Map-text {
+  font-family: 'Quicksand';
+  background-color: #455A64;
+  margin-top: 20px;
+  padding-left: 10px;
+  color: #fff;
+}
+.gdg-Map-textHeader {
+  font-size: 60px;
+}
+.gdg-Map-textBody {
+  font-size: 30px;
+}
+.gdg-Map-button {
+  position: absolute;
+  right: 10px;
+  top: 515px;
+}
+#map {
+  height: 100%;
+}

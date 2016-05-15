@@ -1,0 +1,102 @@
+@media (min-width: 300px) and (max-width: 700px) {
+  .gdg-Speaker-imageWrapper {
+    width: 100%;
+  }
+  .gdg-Speaker-title {
+    margin-bottom: 20px;
+  }
+  .gdg-Toolbar-image {
+    height: 60px;
+    width: auto;
+  }
+  .gdg-Toolbar-menu--large {
+    display: block;
+  }
+  .gdg-Toolbar-button {
+    display: none;
+  }
+  .gdg-SideNav-menuItem {
+    color: #455A64;
+    text-align: left;
+  }
+  .gdg-PaypalButton {
+    display: none;
+  }
+  .gdg-Footer-text {
+    display: none;
+  }
+  .gdg-Footer--small {
+    height: 100px;
+  }
+  .gdg-SocialMediaButtons {
+    margin: 0px;
+    border-bottom: none;
+  }
+  .gdg-SocialMediaButton {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .gdg-Header-content {
+    top: 10%;
+  }
+  .gdg-Header-text {
+    font-size: 45px;
+  }
+  .gdg-Content-text {
+    margin: 50px;
+  }
+  .gdg-Content-cardWrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .gdg-Content-card {
+    height: auto;
+  }
+  .gdg-Content-button {
+    margin-top: 0px;
+    color: #fff;
+    width: inherit;
+  }
+  .gdg-Content-info {
+    margin-top: 20px;
+    height: auto;
+  }
+  .gdg-CountDownClock-hide {
+    display: none;
+  }
+  .gdg-Sponsors-image {
+    width: 50%;
+    height: 50%;
+  }
+  .gdg-Sponsors-tabs {
+    height: 1000px;
+  }
+  .gdg-Content-textHeader {
+    text-align: center;
+    font-size: 45px;
+    color: #455A64;
+  }
+  .gdg-Content-textParagraph {
+    text-align: justify;
+    height: 100%;
+    font-size: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .gdg-Footer {
+    bottom: 0;
+    height: 165px;
+  }
+  .gdg-Footer-box {
+    height: 150px;
+  }
+  .gdg-SocialMediaButtons {
+    border-bottom: none;
+    padding: 0px;
+  }
+  .gdg-wrapSocialMediaButton {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
