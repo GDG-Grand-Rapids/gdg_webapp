@@ -1,10 +1,52 @@
-.gdg-Organizers-portraitImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+.gdg-Organizers {
+  height: 1400px;
+}
+.gdg-Organizer-wrapper {
+  height: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #ECEFF1;
+}
+.gdg-Organizer-profile {
+  width: 50%;
+  margin: 10px;
+}
+.gdg-Organizer-imageWrapper {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 10px;
+  height: 300px
+}
+.gdg-Organizer-imageWrapper--rotateLeft {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+}
+.gdg-Organizer-imageWrapper--rotateRight {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+.gdg-Organizer-image {
+  height: 250px;
+}
+.gdg-Organizer-descriptionText {
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+}
+.gdg-Organizer-nameText {
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+  margin: auto;
+}
+.gdg-Organizer-titleText {
+  display: block;
+  margin: auto;
 }
