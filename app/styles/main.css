@@ -16,10 +16,15 @@
   position: absolute;
   width: 100%;
 }
+.gdg-Header-text--medium {
+  font-size: 100px;
+}
+.gdg-Header-text--large {
+  font-size: 200px;
+}
 .gdg-Header-text {
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 100px;
   text-align: center;
 }
 .gdg-Header-verticalLine {
