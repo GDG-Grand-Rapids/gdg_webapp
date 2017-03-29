@@ -12,8 +12,8 @@ function initMap() {
     name: 'Styled Map'
   });
   var myLatLng = {
-    lat: 42.960324,
-    lng: -85.667779
+    lat: 42.963652,
+    lng: -85.680865
   };
   var mapOptions = {
     zoom: 15,
