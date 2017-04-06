@@ -16,7 +16,7 @@ function initMap() {
     lng: -85.680865
   };
   var mapOptions = {
-    zoom: 15,
+    zoom: 14,
     center: myLatLng,
     draggable: false,
     scrollwheel: false,
