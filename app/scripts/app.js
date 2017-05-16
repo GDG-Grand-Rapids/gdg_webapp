@@ -25,7 +25,7 @@ angular.module('gdgWebappApp', [
     function callAtInterval() {
       $scope.selectedIndex = $scope.selectedIndex + 1;
 
-      if ($scope.selectedIndex === 5) {
+      if ($scope.selectedIndex === 3) {
         $scope.selectedIndex = 0;
       }
     }
