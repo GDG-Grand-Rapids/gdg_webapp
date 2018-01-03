@@ -38,7 +38,9 @@ version 0.11.1.
 
 Run `grunt` for building and `grunt serve` for preview.
 
-`grunt serve:dist` will preview what gets generated in dist
+`grunt serve:dist` will preview what gets generated in dist.
+
+Run `jekyll serve` to run with jekyll (uses dist as source so make sure to run grunt first).
 
 ## Testing
 
@@ -49,6 +51,8 @@ Running `grunt test` will run the unit tests with karma.
 Run `docker-machine start` to setup virtual machine
 
 * `eval "$(docker-machine env default)"` will set default as the vm's environment
+
+*Any changes committed to master will deploy to github pages.*
 
 ### Deploying Automatically
 
