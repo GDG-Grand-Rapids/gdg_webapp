@@ -12,6 +12,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Amatic+SC'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Coming+Soon'>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Roboto" rel="stylesheet">
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/media.css">
@@ -24,7 +25,7 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="gdg-Toolbar">
+  <div class="gdg-Toolbar" id="gdg-toolbar">
     <div>
       <div>
         <img class="gdg-Toolbar-image" ng-src="images/banner/gdg-logo.731f0442.png" alt="Logo">
@@ -33,10 +34,10 @@
       <div class="md-toolbar-tools">
         <span flex></span>
         <md-button class="gdg-Toolbar-button" md-no-ink ng-click="scrollToTop()">Home</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('map')">Map</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('about')">About</md-button>
-        <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('sponsors')">Sponsors</md-button>
-        <md-button class="gdg-Toolbar-button" target="_blank" md-no-ink ng-href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2017-tickets-32520549840">Register</md-button>
+        <!-- <md-button class="gdg-Toolbar-button" md-no-ink ng-click="gotoElement('map')">Map</md-button> -->
+        <md-button class="gdg-Toolbar-button" md-no-ink href="#about">About</md-button>
+        <md-button class="gdg-Toolbar-button" md-no-ink href="#sponsors">Sponsors</md-button>
+        <md-button class="gdg-Toolbar-button" target="_blank" md-no-ink ng-href="https://www.eventbrite.com/e/google-io-extended-grand-rapids-2017-tickets-32520549840" ng-disabled="true">Register</md-button>
         <md-button class="gdg-Toolbar-button" target="_blank" md-no-ink ng-href="mailto:hello@gdggr.org">Contact</md-button>
         <div class="gdg-PaypalButton">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -53,55 +54,24 @@
     </div>
   </div>
 
-  <div class="gdg-Header gdg-Header--large gdg-Header--small">
+  <div class="gdg-Header gdg-Header--large gdg-Header--small" >
     <div class="gdg-Header">
       <img class="gdg-Header gdg-Header-image" ng-src="images/banner/gvsu.d479d68b.jpg" alt="Background">
       <div class="gdg-Header gdg-Header-imageFilter"></div>
     </div>
-    <div class="gdg-Header-content">
+    <div class="gdg-Header-content" id="header">
       <div class="gdg-Header-text">
         Google I/O Extended
       </div>
-    <div class="gdg-Content-cards" layout="row" layout-xs="column" layout-align="space-around">
-      <div class="gdg-Content-cardWrapper">
-        <md-card class="gdg-Content-card">
-          <md-card-title >
-            <md-card-title-text>
-              <span class="md-headline">About Google I/O Extended</span>
-              <span class="md-subhead">
-Google I/O Extended Grand Rapids 2018 is the local extension of an annual developer/consumer conference held by Google in Mountain View, California. Google I/O features highly technical, in-depth sessions focused on building cloud, web, mobile, and enterprise applications with Google and open web technologies. Google I/O Extended will feature live video streams provided by Google, supplemented by live speakers and vendors. This will be our fifth consecutive Google I/O Extended Grand Rapids!</span>
-            </md-card-title-text>
-          </md-card-title>
-          <md-card-actions class="gdg-Content-buttonWrapper" layout="row" layout-align="center center">
-              <md-button class="gdg-Content-button md-raised md-accent"  onClick="document.getElementById('about').scrollIntoView();">More Info</md-button>
-          </md-card-actions>
-        </md-card>
-    </div>
-</div>
-      <!--
-      <div class="gdg-CountDownClock">
-        <div class="gdg-CountDownClock-clock" id="clock" layout="row" layout-align="center">
-          <div class="gdg-CountDownClock-time" flex>
-            <span class="days"></span>
-            <div class="gdg-CountDownClock-text">Days</div>
-          </div>
-          <div class="gdg-Header-verticalLine gdg-CountDownClock-hide"></div>
-          <div class="gdg-CountDownClock-time gdg-CountDownClock-hide" flex>
-            <span class="hours"></span>
-            <div class="gdg-CountDownClock-text">Hours</div>
-          </div>
-          <div class="gdg-Header-verticalLine gdg-CountDownClock-hide"></div>
-          <div class="gdg-CountDownClock-time gdg-CountDownClock-hide" flex>
-            <span class="minutes"></span>
-            <div class="gdg-CountDownClock-text">Minutes</div>
-          </div>
-          <div class="gdg-Header-verticalLine gdg-CountDownClock-hide"></div>
-          <div class="gdg-CountDownClock-time gdg-CountDownClock-hide" flex>
-            <span class="seconds"></span>
-            <div class="gdg-CountDownClock-text">Seconds</div>
-          </div>
-        </div>
-    </div> -->
+      <div class="gdg-header-subheader">
+        <h3>Local Presentations.</h3>
+        <h3>Live Streams.</h3>
+        <h3>Google.</h3>
+      </div>
+      <a href="#about" class="scrolly">
+SCROLLY
+      </a>
+
     </div>
   </div>
 
@@ -110,7 +80,7 @@ Google I/O Extended Grand Rapids 2018 is the local extension of an annual develo
     <div class="gdg-Map" layout="column" layout-xs="column">
       <md-button class="gdg-Map-button md-fab md-accent" ng-href="https://www.google.com/maps/dir/My+Location/Grand+Valley+State+University:+Pew+Campus,+401+Fulton+Street+West,+Grand+Rapids,+MI+49504/@42.9629278,-85.6788385,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8819addbe1f31eef:0xd8e0fe2dcf065680!2m2!1d-85.6807271!2d42.963707!3e0"
         target="_blank" aria-label="Directions">
-         <md-icon md-svg-src="images/icons/directions.svg"></md-icon> 
+         <md-icon md-svg-src="images/icons/directions.svg"></md-icon>
         <md-icon md-svg-src="images/icons/directions.ec7554ce.svg"></md-icon>
         <md-tooltip md-direction="left">
           Directions
@@ -331,8 +301,9 @@ Google I/O Extended Grand Rapids 2018 is the local extension of an annual develo
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
-  <script src="scripts/countdownclock.js"></script>
-  <script src="scripts/map.js"></script>
+  <script src="scripts/smoothScroll.js"></script>
+  <!-- <script src="scripts/countdownclock.js"></script> -->
+  <!-- <script src="scripts/map.js"></script> -->
   <!-- endbuild -->
 
   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>

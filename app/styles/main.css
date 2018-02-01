@@ -4,6 +4,7 @@
 @import url("components/sponsors.css");
 @import url("components/speakers.css");
 @import url("components/organizers.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .gdg-Header {
   height: 100%;
@@ -15,12 +16,21 @@
   top: 20%;
   position: absolute;
   width: 100%;
+  height: 100%;
+  margin: 0 20%;
+  font-family:'Roboto', sans;
+  text-align: left;
+  color: #fff;
 }
 .gdg-Header-text {
-  color: #fff;
-  font-family: 'Amatic SC', cursive;
-  font-size: 100px;
-  text-align: center;
+  font-size: 6em;
+}
+.gdg-header-subheader{
+  font-size: 2.5em;
+  margin: .5em 0;
+}
+.gdg-header-subheader h3 {
+    margin: 0 .125em;
 }
 .gdg-Header-verticalLine {
   height: auto;

@@ -38,9 +38,13 @@
   }
   .gdg-Header-content {
     top: 10%;
+    margin: 0 10%;
   }
   .gdg-Header-text {
-    font-size: 45px;
+    font-size: 2em;
+  }
+  .gdg-header-subheader{
+      font-size: 1em;
   }
   .gdg-Content-text {
     margin: 50px;
@@ -64,6 +68,9 @@
   }
   .gdg-CountDownClock-hide {
     display: none;
+  }
+  .gdg-CountDownClock-cell {
+      width: 100%;
   }
   .gdg-Sponsors-image {
     width: 50%;

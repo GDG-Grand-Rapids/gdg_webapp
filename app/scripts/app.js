@@ -90,3 +90,24 @@ angular.module('gdgWebappApp', [
         'hue-3': 'A100'
       });
   });
+
+  /*
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+/*
+(function($) {
+  $(function() {
+
+
+		// Scrolly.
+			$header = $('#gdg-toolbar');
+			$('.scrolly')
+				.scrolly({
+					speed: 1500,
+					offset: $header.outerHeight()
+				});
+  });
+})(jquery);
+*/
