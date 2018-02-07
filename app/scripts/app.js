@@ -30,7 +30,7 @@ angular.module('gdgWebappApp', [
       }
     }
 
-    $interval(callAtInterval, 10000);
+    $interval(callAtInterval, 6000);
 
     angular.element($window).bind('scroll', function() {
       var header = angular.element(document.querySelector('.gdg-Header'));
