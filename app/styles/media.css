@@ -38,7 +38,26 @@
   }
   .gdg-Header-content {
     top: 10%;
-    margin: 0 10%;
+    margin: 0;
+  }
+  .left {
+    margin: 10%; 
+  }
+  .bottom {
+    position: fixed;
+    bottom: .75em;
+    width: 100%;
+  }
+  .center {
+    width=80%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+  }
+  .clean-link {
+    color:white;
+    text-decoration:none;
+    font-size: 1.3em;
   }
   .gdg-Header-text {
     font-size: 2em;
