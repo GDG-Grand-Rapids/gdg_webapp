@@ -1,17 +1,20 @@
+
 .gdg-CountDownClock {
-  margin-top: 100px;
-  color: #fff;
+  margin-top: 2em;
+  position: absolute;
+  bottom: 30%;
+  width: 75%;
 }
 .gdg-CountDownClock-clock {
-  font-family: 'Amatic SC', cursive;
-  color: #fff;
   font-weight: 100;
-  text-align: center;
-  font-size: 200px;
 }
-.gdg-CountDownClock-time {
-  width: 100px;
+.gdg-CountDownClock-cell {
+    text-align: center;
+    width: 35%;
 }
 .gdg-CountDownClock-text {
-  font-size: 20px;
+    font-size: 1.75em;
+}
+.gdg-CountDownClock-time {
+    font-size: 6em;
 }
